@@ -5,8 +5,9 @@
     <sys:String x:Key="Header_SelectLanguage">ഭാഷ തിരഞ്ഞെടുക്കുക</sys:String>
     <sys:String x:Key="Header_PersonalDetail">വ്യക്തിഗത വിവരങ്ങൾ നൽകുക</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">സൗദി ഐഡി / ഇഖാമ ഐഡി നൽകുക</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">പ്രിയ മുസ്തഫ താജ്, നിങ്ങളുടെ നാഷണൽ ഐഡി / ഇഖാമ കാലഹരണപ്പെട്ടു.&#x0A;
-നിങ്ങൾ അബ്ഷർ പ്ലാറ്റ്ഫോമിൽ നിങ്ങളുടെ നാഷണൽ ഐഡി / ഇഖാമ അപ്‌ഡേറ്റ് ചെയ്തിട്ടുണ്ടെങ്കിൽ, ദയവായി&#x0A; ഏറ്റവും അടുത്ത ശാഖ സന്ദർശിക്കുക.
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        പ്രിയ {0}, നിങ്ങളുടെ നാഷണൽ ഐഡി/ഇഖാമയുടെ കാലാവധി കഴിഞ്ഞിരിക്കുന്നു.
+നിങ്ങൾ നിങ്ങളുടെ നാഷണൽ ഐഡി/ഇഖാമ Absher പ്ലാറ്റ്ഫോമിൽ അപ്‌ഡേറ്റ് ചെയ്തിട്ടുണ്ടെങ്കിൽ, ദയവായി അടുത്ത ശാഖ സന്ദർശിക്കുക.
     </sys:String>
     <sys:String x:Key="MainContent_Update">അപ്ഡേറ്റ്</sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">മെയിൻ&#x0A;സ്ക്രീൻ</sys:String>

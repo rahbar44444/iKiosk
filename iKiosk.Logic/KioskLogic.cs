@@ -55,10 +55,10 @@ namespace iKiosk.Logic
 					};
 
 				// Expired case – Rahbar Khan
-				case 213456789:
+				case 1234567891:
 					return new PersonalDetailResponse
 					{
-						IsValid = true,
+						IsValid = false,
 						FullName = "Rahbar Khan",
 						StatusMessage = "Your national ID/Iqama is expired. Please visit the nearest branch.",
 						CustomerId = "CUST-9876543210",

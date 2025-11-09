@@ -5,8 +5,9 @@
     <sys:String x:Key="Header_SelectLanguage">भाषा चुनें</sys:String>
     <sys:String x:Key="Header_PersonalDetail">व्यक्तिगत विवरण दर्ज करें</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">सऊदी आईडी / इकामा आईडी दर्ज करें</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">प्रिय मुस्तफा ताज, आपकी राष्ट्रीय आईडी / इक़ामा की अवधि समाप्त हो गई है।&#x0A;
-यदि आपने अबशर प्लेटफ़ॉर्म पर अपनी राष्ट्रीय आईडी / इक़ामा अपडेट की है, तो कृपया&#x0A; निकटतम शाखा पर जाएँ।
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        प्रिय {0}, आपकी राष्ट्रीय आईडी/इकामा की अवधि समाप्त हो गई है।
+यदि आपने अपनी राष्ट्रीय आईडी/इकामा को Absher प्लेटफॉर्म पर अपडेट किया है, तो कृपया निकटतम शाखा पर जाएं।
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">मुख्य&#x0A;स्क्रीन</sys:String>
     <sys:String x:Key="MainContent_Update">अद्यतन</sys:String>

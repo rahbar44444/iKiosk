@@ -32,7 +32,7 @@ namespace iKiosk.UI.ViewModels
 
 		private string _NextButtonText = "Next";
 
-		private int _SaudiIqamaId;
+		private int? _SaudiIqamaId;
 
 		private string _DateOfBirth;
 
@@ -47,7 +47,7 @@ namespace iKiosk.UI.ViewModels
 
 		#region Public Properties
 
-		public int SaudiIqamaId
+		public int? SaudiIqamaId
 		{
 			get { return _SaudiIqamaId; }
 			set 
@@ -167,7 +167,7 @@ namespace iKiosk.UI.ViewModels
 				CultureInfo.InvariantCulture,
 				DateTimeStyles.None,
 				out dateOfBirth);
-			_response = await _apiClient.VerifyPersonalDetailsAsync(new PersonalDetailRequest { SaudiId= SaudiIqamaId, DateOfBirth= dateOfBirth });
+			_response = await _apiClient.VerifyPersonalDetailsAsync(new PersonalDetailRequest { SaudiId= SaudiIqamaId.GetValueOrDefault(), DateOfBirth= dateOfBirth });
 
 			if (_response is null)
 				return;

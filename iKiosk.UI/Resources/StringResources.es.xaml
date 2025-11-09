@@ -6,8 +6,9 @@
     <sys:String x:Key="Header_PersonalDetail">Ingrese los datos personales</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">Introduzca el ID saudí / Iqama ID</sys:String>
     <sys:String x:Key="MainContent_DateOfBirth">Fecha de nacimiento</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Estimado Mustafa Taj, su identificación nacional/Iqama ha expirado.&#x0A;
-Si actualizó su identificación nacional/Iqama en la plataforma Absher, por favor&#x0A; visite la sucursal más cercana.
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        Estimado {0}, su identificación nacional/Iqama ha caducado.
+Si actualizó su identificación nacional/Iqama en la plataforma Absher, por favor visite la sucursal más cercana.
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Pantalla&#x0A;principal</sys:String>
     <sys:String x:Key="MainContent_Update">Actualizar</sys:String>

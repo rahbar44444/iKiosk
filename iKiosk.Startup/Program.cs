@@ -48,7 +48,7 @@ namespace iKiosk.Startup
 					services.AddSingleton<MainWindow>();
 
 					// ViewModels
-					services.AddTransient<MainViewModel>();
+					services.AddScoped<MainViewModel>();
 
 					// Services
 					services.AddScoped<IMessageService, MessageService>();

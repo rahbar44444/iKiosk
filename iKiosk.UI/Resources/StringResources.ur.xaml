@@ -6,8 +6,9 @@
     <sys:String x:Key="Header_PersonalDetail">ذاتی تفصیلات درج کریں</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">سعودی شناختی نمبر / اقامہ نمبر درج کریں</sys:String>
     <sys:String x:Key="MainContent_DateOfBirth">تاریخِ پیدائش</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">عزيزي مصطفى تاج، انتهت صلاحية هويتك الوطنية / الإقامة الخاصة بك.&#x0A;
-اپنی قومی شناخت / اقامہ اپ ڈیٹ کیا ہے تو براہ کرم قریبی شاخ کا دورہ کریں۔&#x0A; اگر آپ نے ابشر پلیٹ فارم پر.
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        محترم {0}، آپ کی قومی شناخت / اقامہ کی میعاد ختم ہو چکی ہے۔
+اگر آپ نے اپنی قومی شناخت / اقامہ ابشر پلیٹ فارم پر اپ ڈیٹ کر لیا ہے، تو براہ کرم قریبی برانچ پر جائیں۔
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">سکرین&#x0A;مرکزی</sys:String>
     <sys:String x:Key="MainContent_Update">اپ ڈیٹ</sys:String>

@@ -5,8 +5,9 @@
     <sys:String x:Key="Header_SelectLanguage">Piliin ang Wika</sys:String>
     <sys:String x:Key="Header_PersonalDetail">Ipasok ang mga personal na detalye</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">Ipasok ang Saudi ID / Iqama ID</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Mahal na Mustafa Taj, ang iyong National ID/Iqama ay nag-expire na.&#x0A;
-Kung na-update mo ang iyong National ID/Iqama sa Absher platform, mangyaring&#x0A; bumisita sa pinakamalapit na sangay.
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        Mahal na {0}, ang iyong National ID/Iqama ay nag-expire na.
+Kung na-update mo na ang iyong National ID/Iqama sa Absher platform, mangyaring bumisita sa pinakamalapit na sangay.
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Pangunahing&#x0A;Screen</sys:String>
     <sys:String x:Key="MainContent_Update">I-update</sys:String>

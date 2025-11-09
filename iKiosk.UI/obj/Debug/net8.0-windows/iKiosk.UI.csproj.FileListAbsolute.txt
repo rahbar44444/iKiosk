@@ -29,7 +29,6 @@ C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Defa
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\Colors.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\Fonts.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\TextBlock.baml
-C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\TextBoxStyle.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\Theme.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\CustomControls\BusyIndicator.g.cs
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\CustomControls\KioskLayout.g.cs
@@ -53,6 +52,7 @@ C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\CustomControls\NumberKeypadCo
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\MainWindow.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\Buttons.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\IconButtons.baml
+C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Styles\ApplicationThemes\Default\TextBoxStyle.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Themes\Generic.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Views\AmountCalculationView.baml
 C:\_Demo\iKiosk\iKiosk.UI\obj\Debug\net8.0-windows\Views\ExpiredView.baml

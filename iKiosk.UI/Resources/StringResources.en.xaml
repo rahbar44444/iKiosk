@@ -5,8 +5,9 @@
     <sys:String x:Key="Header_PersonalDetail">Enter personal details</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">Enter Saudi ID / Iqama ID</sys:String>
     <sys:String x:Key="MainContent_DateOfBirth">Date of Birth</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Dear Mustafa Taj, your national ID/Iqama is expired.&#x0A;
-If you updated your national ID/Iqama in Absher platform, please&#x0A; visit the nearest branch.
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        Dear {0}, your national ID/Iqama is expired.
+If you updated your national ID/Iqama in Absher platform, please visit the nearest branch.
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Main&#x0A;Screen</sys:String>
     <sys:String x:Key="MainContent_Update">Update</sys:String>

@@ -5,8 +5,9 @@
     <sys:String x:Key="Header_PersonalDetail">أدخل التفاصيل الشخصية</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">أدخل رقم الهوية السعودية / الإقامة</sys:String>
     <sys:String x:Key="MainContent_DateOfBirth">تاريخ الميلاد</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">عزيزي مصطفى تاج، انتهت صلاحية هويتك الوطنية / الإقامة الخاصة بك.&#x0A;
-الوطنية / الإقامة على منصة أبشر، يرجى زيارة أقرب فرع۔&#x0A; إذا قمت بتحديث هويتك.
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        عزيزي {0}، انتهت صلاحية هويتك الوطنية / الإقامة الخاصة بك.
+إذا قمت بتحديث هويتك الوطنية / الإقامة في منصة أبشر، يرجى زيارة أقرب فرع.
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">الرئيسية&#x0A;الشاشة</sys:String>
     <sys:String x:Key="MainContent_Update">تحديث</sys:String>

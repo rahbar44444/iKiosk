@@ -5,8 +5,9 @@
     <sys:String x:Key="Header_SelectLanguage">Choisir la langue</sys:String>
     <sys:String x:Key="Header_PersonalDetail">Entrez les détails personnels</sys:String>
     <sys:String x:Key="MainContent_SaudiIqamaId">Saisissez l’ID saoudien / l’Iqama ID</sys:String>
-    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Cher Mustafa Taj, votre carte d'identité nationale/Iqama a expiré.&#x0A;
-Si vous avez mis à jour votre carte d'identité/Iqama sur la plateforme Absher, veuillez&#x0A; visiter la succursale la plus proche..
+    <sys:String x:Key="MainContent_ExpiredMessage">
+        Cher {0}, votre carte d'identité nationale/Iqama a expiré.
+Si vous avez mis à jour votre carte d'identité/Iqama sur la plateforme Absher, veuillez visiter la succursale la plus proche.
     </sys:String>
     <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Écran&#x0A;principal</sys:String>
     <sys:String x:Key="MainContent_Update">Mettre à jour</sys:String>
