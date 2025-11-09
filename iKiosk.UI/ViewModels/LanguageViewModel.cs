@@ -26,17 +26,22 @@ namespace iKiosk.UI.ViewModels
 {
 	public class LanguageViewModel : ViewModelControlBase
 	{
-		//public string HeaderText { get; } 
-
-		//public ImageSource HeaderImageSource { get; } = ImageSourceConstants.LanguageIconPath;
+		#region Private Fields
 
 		private readonly IViewNavigation _navigation;
 		private readonly IApiClient _apiClient;
 
-		public ICommand NavigateMainMenuCommand { get; set; }
-
-
 		private ObservableCollection<LanguageOption> _Languages;
+
+		private string _NextButtonText = "Next";
+
+		private bool _IsMainMenuVisible = true;
+		private bool _IsBackVisible = false;
+		private bool _IsNextVisible = false;
+
+		#endregion Private Fields
+
+		#region Public Properties
 
 		public ObservableCollection<LanguageOption> Languages
 		{
@@ -48,72 +53,69 @@ namespace iKiosk.UI.ViewModels
 			}
 		}
 
-
-		public ICommand SelectLanguageCommand { get; }
-
-		public ICommand MainMenuCommand { get; }
-		public ICommand BackCommand { get; }
-		public ICommand NextCommand { get; }
-
-		private bool _isMainMenuVisible = true;
 		public bool IsMainMenuVisible
 		{
-			get => _isMainMenuVisible;
+			get => _IsMainMenuVisible;
 			set
 			{
-				_isMainMenuVisible = value;
+				_IsMainMenuVisible = value;
 				this.OnPropertyChanged("IsMainMenuVisible");
 			}
 		}
 
-		private bool _isBackVisible = false;
 		public bool IsBackVisible
 		{
-			get => _isBackVisible;
+			get => _IsBackVisible;
 			set
 			{
-				_isBackVisible = value;
+				_IsBackVisible = value;
 				this.OnPropertyChanged("IsBackVisible");
 			}
 		}
 
-		private bool _isNextVisible = false;
 		public bool IsNextVisible
 		{
-			get => _isNextVisible;
+			get => _IsNextVisible;
 			set
 			{
-				_isNextVisible = value;
+				_IsNextVisible = value;
 				this.OnPropertyChanged("IsNextVisible");
 			}
 		}
 
-		private string _nextButtonText = "Next";
 		public string NextButtonText
 		{
-			get => _nextButtonText;
+			get => _NextButtonText;
 			set
 			{
-				_nextButtonText = value;
+				_NextButtonText = value;
 				this.OnPropertyChanged("NextButtonText");
 			}
 		}
 
+		#endregion Public Properties
 
+		#region Commands
+
+		public ICommand NavigateMainMenuCommand { get; set; }
+		public ICommand SelectLanguageCommand { get; }
+
+		#endregion Commands
+
+		#region Constructor
 
 		public LanguageViewModel(IViewNavigation navigation, IApiClient apiClient)
 		{
-			//HeaderImageSource = new BitmapImage(
-			//	new Uri(ImageSourceConstants.LanguageIconPath));
 			_navigation = navigation;
 			_apiClient = apiClient;
 			NavigateMainMenuCommand = new Command(NavigateMainMenu, CanNavigateMainMenu);
-
 			LoadLanguages();
-
-
 			SelectLanguageCommand = new Command<LanguageOption>(OnLanguageSelected);
 		}
+
+		#endregion Constructor
+
+		#region Private Methods
 
 		private async Task LoadLanguages()
 		{
@@ -172,6 +174,8 @@ namespace iKiosk.UI.ViewModels
 			return true;
 
 		}
+
+		#endregion Private Methods
 	}
-	
+
 }

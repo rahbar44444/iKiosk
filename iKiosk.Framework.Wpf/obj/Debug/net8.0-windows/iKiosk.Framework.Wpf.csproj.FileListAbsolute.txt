@@ -5,6 +5,7 @@ C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.W
 C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.AssemblyInfoInputs.cache
 C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.AssemblyInfo.cs
 C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.csproj.CoreCompileInputs.cache
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.sourcelink.json
 C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.dll
 C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\refint\iKiosk.Framework.Wpf.dll
 C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.pdb

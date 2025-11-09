@@ -8,6 +8,7 @@ C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.Logic.GeneratedMSBuildEdito
 C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.Logic.AssemblyInfoInputs.cache
 C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.Logic.AssemblyInfo.cs
 C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.Logic.csproj.CoreCompileInputs.cache
+C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.Logic.sourcelink.json
 C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.L.2ED8591C.Up2Date
 C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\iKiosk.Logic.dll
 C:\_Demo\iKiosk\iKiosk.Logic\obj\Debug\net8.0\refint\iKiosk.Logic.dll

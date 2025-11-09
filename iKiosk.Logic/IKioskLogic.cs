@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iKiosk.Logic.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,6 @@ namespace iKiosk.Logic
 		IEnumerable<Logic.Model.LanguageOption> GetAvailableLanguages();
 		Logic.Model.PersonalDetailResponse VerifyPersonalDetails(Logic.Model.PersonalDetailRequest request);
 		IEnumerable<Logic.Model.ServiceOption> GetAvailableServiceOptions();
+		RemittanceCalculationResponse CalculateRemittance(RemittanceCalculationRequest request);
 	}
 }

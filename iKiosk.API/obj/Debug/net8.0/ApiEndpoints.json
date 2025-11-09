@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "iKiosk.API.Controllers.KioskController",
+    "Method": "Calculate",
+    "RelativePath": "api/Kiosk/calculate-remittance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "iKiosk.Logic.Model.RemittanceCalculationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "iKiosk.API.Controllers.KioskController",
     "Method": "GetAvailableLanguages",
     "RelativePath": "api/Kiosk/languages",
     "HttpMethod": "GET",

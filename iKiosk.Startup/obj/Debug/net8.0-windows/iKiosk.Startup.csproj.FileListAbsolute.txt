@@ -1,8 +1,3 @@
-C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.csproj.AssemblyReference.cache
-C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.GeneratedMSBuildEditorConfig.editorconfig
-C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.AssemblyInfoInputs.cache
-C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.AssemblyInfo.cs
-C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.csproj.CoreCompileInputs.cache
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.UI.deps.json
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.UI.runtimeconfig.json
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.UI.exe
@@ -28,6 +23,7 @@ C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Fil
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Http.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
@@ -50,10 +46,15 @@ C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.Framework.Wpf.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.UI.dll
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.UI.pdb
 C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\iKiosk.Framework.Wpf.pdb
+C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.csproj.AssemblyReference.cache
+C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.AssemblyInfoInputs.cache
+C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.AssemblyInfo.cs
+C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.csproj.CoreCompileInputs.cache
+C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.sourcelink.json
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.S.B58E07E9.Up2Date
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.dll
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\refint\iKiosk.Startup.dll
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.pdb
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.genruntimeconfig.cache
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\ref\iKiosk.Startup.dll
-C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\Microsoft.Extensions.Http.dll

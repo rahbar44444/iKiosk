@@ -21,6 +21,7 @@ C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\iKiosk.API.AssemblyInfo.cs
 C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\iKiosk.API.csproj.CoreCompileInputs.cache
 C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\iKiosk.API.MvcApplicationPartsAssemblyInfo.cs
 C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\iKiosk.API.MvcApplicationPartsAssemblyInfo.cache
+C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\iKiosk.API.sourcelink.json
 C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\scopedcss\bundle\iKiosk.API.styles.css
 C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\_Demo\iKiosk\iKiosk.API\obj\Debug\net8.0\staticwebassets.build.json.cache

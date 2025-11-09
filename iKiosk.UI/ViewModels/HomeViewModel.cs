@@ -15,13 +15,29 @@ namespace iKiosk.UI.ViewModels
 {
 	public class HomeViewModel : ViewModelControlBase
 	{
+		#region Private Fields
+
 		private readonly IViewNavigation _navigation;
+
+		#endregion Private Fields
+
+		#region Commands
+
 		public ICommand StartCommand { get; set; }
+
+		#endregion Commands
+
+		#region Constructor
+
 		public HomeViewModel(IViewNavigation navigation)
 		{
 			_navigation = navigation;
 			StartCommand = new Command(Start, CanStart);
 		}
+
+		#endregion Constructor
+
+		#region Private Methods
 
 		private void Start(object obj)
 		{
@@ -33,5 +49,7 @@ namespace iKiosk.UI.ViewModels
 			return true;
 
 		}
+
+		#endregion Private Methods
 	}
 }

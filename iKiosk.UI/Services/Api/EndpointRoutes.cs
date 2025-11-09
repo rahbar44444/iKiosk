@@ -11,5 +11,6 @@ namespace iKiosk.UI.Services.Api
 		public const string Languages = "api/kiosk/languages";
 		public const string VerifyPersonalDetails = "api/kiosk/verify";
 		public const string Services = "api/kiosk/services";
+		public const string CalculateRemittance = "api/kiosk/calculate-remittance";
 	}
 }

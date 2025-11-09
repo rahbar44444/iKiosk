@@ -64,5 +64,18 @@ namespace iKiosk.UI.Services.Api
 				return result ?? Enumerable.Empty<ServiceOption>();
 			});
 		}
+
+		public Task<ApiResult<RemittanceCalculationResponse>> CalculateRemittanceAsync(RemittanceCalculationRequest request)
+		{
+			return TryAsync(async () =>
+			{
+				var response = await _http.PostAsJsonAsync(EndpointRoutes.CalculateRemittance, request);
+				response.EnsureSuccessStatusCode();
+
+				var data = await response.Content.ReadFromJsonAsync<RemittanceCalculationResponse>();
+				return data!;
+			});
+		}
+
 	}
 }

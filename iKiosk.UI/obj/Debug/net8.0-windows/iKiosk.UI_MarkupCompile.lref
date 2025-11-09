@@ -5,6 +5,7 @@ FC:\_Demo\iKiosk\iKiosk.UI\CustomControls\NumberKeypadControl.xaml;;
 FC:\_Demo\iKiosk\iKiosk.UI\MainWindow.xaml;;
 FC:\_Demo\iKiosk\iKiosk.UI\Styles\ApplicationThemes\Default\Buttons.xaml;;
 FC:\_Demo\iKiosk\iKiosk.UI\Styles\ApplicationThemes\Default\IconButtons.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Styles\ApplicationThemes\Default\TextBoxStyle.xaml;;
 FC:\_Demo\iKiosk\iKiosk.UI\Themes\Generic.xaml;;
 FC:\_Demo\iKiosk\iKiosk.UI\Views\AmountCalculationView.xaml;;
 FC:\_Demo\iKiosk\iKiosk.UI\Views\ExpiredView.xaml;;

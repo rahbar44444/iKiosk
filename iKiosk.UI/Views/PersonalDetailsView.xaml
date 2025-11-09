@@ -64,14 +64,25 @@
                                Foreground="White"
                                Margin="0,20,0,5"/>
 
-                    <!--<TextBox Height="60" Margin="0 0 20 0"
+                    <TextBox Tag="txtDateOfBirth" Height="60" Margin="0 0 20 0"
                              Background="White"
                              Foreground="Black"
-                             Text="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
-                    <DatePicker Margin="0 0 20 0"
+                             Text="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                    <!--<DatePickerTextBox Margin="0 0 20 0"
                              Background="White"
                              Foreground="Black"
-                             SelectedDate="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                             SelectedDate="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>-->
+                    <!--<DatePicker Margin="0 0 20 0"
+                             Background="White"
+                             Foreground="Black"
+            SelectedDate="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            SelectedDateFormat="Short">
+                        <DatePicker.Resources>
+                            <Style TargetType="DatePickerTextBox"
+               BasedOn="{StaticResource DatePickerTextBoxStyle}" />
+                        </DatePicker.Resources>
+                    </DatePicker>-->
+
                 </StackPanel>
 
                 <!-- Right section -->

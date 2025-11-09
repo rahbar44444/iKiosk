@@ -23,12 +23,29 @@ namespace iKiosk.UI.ViewModels
 {
 	public class PersonalDetailsViewModel : ViewModelControlBase
 	{
+		#region Private Fields
+
 		private readonly IApiClient _apiClient;
 		private readonly IViewNavigation _navigation;
 
 		private ApiResult<PersonalDetailResponse> _response;
 
+		private string _NextButtonText = "Next";
+
 		private int _SaudiIqamaId;
+
+		private string _DateOfBirth;
+
+		private bool _IsMainMenuVisible = true;
+		private bool _IsBackVisible = true;
+		private bool _IsNextVisible = true;
+		private bool IsValidDOB = false;
+		private bool IsSaudiIqamaValid = false;
+		private bool _IsNextEnabled = false;
+
+		#endregion Private Fields
+
+		#region Public Properties
 
 		public int SaudiIqamaId
 		{
@@ -37,10 +54,9 @@ namespace iKiosk.UI.ViewModels
 			{ 
 				_SaudiIqamaId = value; 
 				OnPropertyChanged("SaudiIqamaId");
+				IsNextEnabled = _SaudiIqamaId.ToString().Length == 10;
 			}
 		}
-
-		private string _DateOfBirth;
 
 		public string DateOfBirth
 		{
@@ -49,59 +65,78 @@ namespace iKiosk.UI.ViewModels
 			{ 
 				_DateOfBirth = value; 
 				OnPropertyChanged("DateOfBirth");
+				IsNextEnabled= DateTime.TryParseExact(
+				DateOfBirth,
+				"dd/MM/yyyy",
+				CultureInfo.InvariantCulture,
+				DateTimeStyles.None,
+				out DateTime dateOfBirth);
 			}
 		}
+
+		public bool IsMainMenuVisible
+		{
+			get { return _IsMainMenuVisible; }
+			set
+			{
+				_IsMainMenuVisible = value;
+				this.OnPropertyChanged("IsMainMenuVisible");
+			}
+		}
+
+		public bool IsBackVisible
+		{
+			get { return _IsBackVisible; }
+			set
+			{
+				_IsBackVisible = value;
+				this.OnPropertyChanged("IsBackVisible");
+			}
+		}
+
+		public bool IsNextVisible
+		{
+			get { return _IsNextVisible; }
+			set
+			{
+				_IsNextVisible = value;
+				this.OnPropertyChanged("IsNextVisible");
+			}
+		}
+
+		public string NextButtonText
+		{
+			get { return _NextButtonText; }
+			set
+			{
+				_NextButtonText = value;
+				this.OnPropertyChanged("NextButtonText");
+			}
+		}
+
+		public bool IsNextEnabled
+		{
+			get { return _IsNextEnabled; }
+			set 
+			{ 
+				_IsNextEnabled = value;
+				OnPropertyChanged("IsNextEnabled");
+			}
+		}
+
+
+		#endregion Public Properties
+
+		#region Commands
 
 		public ICommand NavigateMainMenuCommand { get; }
 		public ICommand NavigateNextCommand { get; }
 		public ICommand NavigateBackCommand { get; }
 		public ICommand RemittanceCommand { get; set; }
 
-		private bool _isMainMenuVisible = true;
-		public bool IsMainMenuVisible
-		{
-			get => _isMainMenuVisible;
-			set
-			{
-				_isMainMenuVisible = value;
-				this.OnPropertyChanged("IsMainMenuVisible");
-			}
-		}
+		#endregion Commands		
 
-		private bool _isBackVisible = true;
-		public bool IsBackVisible
-		{
-			get => _isBackVisible;
-			set
-			{
-				_isBackVisible = value;
-				this.OnPropertyChanged("IsBackVisible");
-			}
-		}
-
-		private bool _isNextVisible = true;
-		public bool IsNextVisible
-		{
-			get => _isNextVisible;
-			set
-			{
-				_isNextVisible = value;
-				this.OnPropertyChanged("IsNextVisible");
-			}
-		}
-
-		private string _nextButtonText = "Next";
-		public string NextButtonText
-		{
-			get => _nextButtonText;
-			set
-			{
-				_nextButtonText = value;
-				this.OnPropertyChanged("NextButtonText");
-			}
-		}
-
-
+		#region Constructor
 
 		public PersonalDetailsViewModel(IViewNavigation navigation, IApiClient apiClient)
 		{
@@ -113,20 +148,26 @@ namespace iKiosk.UI.ViewModels
 			RemittanceCommand = new Command(RemittanceCalculator, CanCalculateRemittance);
 		}
 
+		#endregion Constructor
+
+		#region Private Methods
+
 		private void NavigateMainMenu(object obj)
 		{
 			_navigation.NavigateTo<HomeViewModel>();
 		}
 
-		private bool CanNavigateMainMenu(object obj)
-		{
-			return true;
-
-		}
-
 		private async void NavigateNext(object obj)
 		{
-			_response = await _apiClient.VerifyPersonalDetailsAsync(new PersonalDetailRequest { SaudiId= SaudiIqamaId, DateOfBirth= DateTime.Now });
+			DateTime dateOfBirth;
+
+			DateTime.TryParseExact(
+				DateOfBirth,
+				"dd/MM/yyyy",
+				CultureInfo.InvariantCulture,
+				DateTimeStyles.None,
+				out dateOfBirth);
+			_response = await _apiClient.VerifyPersonalDetailsAsync(new PersonalDetailRequest { SaudiId= SaudiIqamaId, DateOfBirth= dateOfBirth });
 
 			if (_response is null)
 				return;
@@ -141,32 +182,37 @@ namespace iKiosk.UI.ViewModels
 			}
 		}
 
+		private void NavigateBack(object obj)
+		{
+			_navigation.NavigateTo<HomeViewModel>();
+		}
+		private void RemittanceCalculator(object obj)
+		{
+			_navigation.NavigateTo<AmountCalculationViewModel>(_response?.Data);
+		}
+
+		private bool CanNavigateMainMenu(object obj)
+		{
+			return true;
+
+		}
 		private bool CanNavigateNext(object obj)
 		{
 			return true;
 
 		}
-
-		private void NavigateBack(object obj)
-		{
-			_navigation.NavigateTo<HomeViewModel>();
-		}
-
 		private bool CanNavigateBack(object obj)
 		{
 			return true;
 
 		}
 
-		private void RemittanceCalculator(object obj)
-		{
-			_navigation.NavigateTo<AmountCalculationViewModel>(_response.Data);
-		}
-
 		private bool CanCalculateRemittance(object obj)
 		{
 			return true;
 		}
+
+		#endregion Private Methods
 	}
-	
+
 }

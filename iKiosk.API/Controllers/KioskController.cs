@@ -36,5 +36,15 @@ namespace iKiosk.API.Controllers
 			var languages = _kioskLogic.GetAvailableServiceOptions();
 			return Ok(languages);
 		}
+
+		[HttpPost("calculate-remittance")]
+		public IActionResult Calculate([FromBody] RemittanceCalculationRequest request)
+		{
+			if (!ModelState.IsValid)
+				return BadRequest(ModelState);
+
+			var result = _kioskLogic.CalculateRemittance(request);
+			return Ok(result);
+		}
 	}
 }

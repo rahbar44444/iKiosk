@@ -2,6 +2,7 @@
 using iKiosk.Framework.Wpf.Interface;
 using iKiosk.Framework.Wpf.ViewModel;
 using iKiosk.UI.Helper;
+using iKiosk.UI.Services.Api;
 using iKiosk.UI.Services.Models;
 using System;
 using System.Collections;
@@ -21,93 +22,136 @@ namespace iKiosk.UI.ViewModels
 {
 	public class PaymentMethodViewModel : ViewModelControlBase
 	{
+		#region Private Fields
+
+		private readonly IApiClient _apiClient;
 		private readonly IViewNavigation _navigation;
 
-		public ObservableCollection<ServiceOption> Services { get; set; }
+		private string _SelectedPaymentMethod;
+		private string _NextButtonText = "Next";
+
+		private bool _IsMainMenuVisible = true;
+		private bool _IsNextVisible = true;
+		private bool _IsBackVisible = true;
+
+		#endregion Private Fields
+
+		#region Public Properties
+
+		public bool IsMainMenuVisible
+		{
+			get { return _IsMainMenuVisible; }
+			set
+			{
+				_IsMainMenuVisible = value;
+				this.OnPropertyChanged("IsMainMenuVisible");
+			}
+		}
+
+		public bool IsBackVisible
+		{
+			get { return _IsBackVisible; }
+			set
+			{
+				_IsBackVisible = value;
+				this.OnPropertyChanged("IsBackVisible");
+			}
+		}
+
+		public bool IsNextVisible
+		{
+			get { return _IsNextVisible; }
+			set
+			{
+				_IsNextVisible = value;
+				this.OnPropertyChanged("IsNextVisible");
+			}
+		}
+
+		public string NextButtonText
+		{
+			get { return _NextButtonText; }
+			set
+			{
+				_NextButtonText = value;
+				this.OnPropertyChanged("NextButtonText");
+			}
+		}
+
+		public string SelectedPaymentMethod
+		{
+			get { return _SelectedPaymentMethod; }
+			set
+			{
+				if (_SelectedPaymentMethod != value)
+				{
+					_SelectedPaymentMethod = value;
+					OnPropertyChanged(nameof(SelectedPaymentMethod));
+				}
+			}
+		}
+
+		#endregion Public Properties
+
+		#region Commands
 
 		public ICommand SelectedServiceCommand { get; }
 
 		public ICommand NavigateMainMenuCommand { get; }
 		public ICommand NavigateNextCommand { get; }
 		public ICommand NavigateBackCommand { get; }
+		public ICommand PayByCashCommand { get; set; }
+		public ICommand PayByCardCommand { get; set; }
 
-		private bool _isMainMenuVisible = true;
-		public bool IsMainMenuVisible
+		#endregion Commands
+
+		#region Constructor
+
+		public PaymentMethodViewModel(IViewNavigation navigation, IApiClient apiClient)
 		{
-			get => _isMainMenuVisible;
-			set
-			{
-				_isMainMenuVisible = value;
-				this.OnPropertyChanged("IsMainMenuVisible");
-			}
-		}
-
-		private bool _isBackVisible = true;
-		public bool IsBackVisible
-		{
-			get => _isBackVisible;
-			set
-			{
-				_isBackVisible = value;
-				this.OnPropertyChanged("IsBackVisible");
-			}
-		}
-
-		private bool _isNextVisible = true;
-		public bool IsNextVisible
-		{
-			get => _isNextVisible;
-			set
-			{
-				_isNextVisible = value;
-				this.OnPropertyChanged("IsNextVisible");
-			}
-		}
-
-		private string _nextButtonText = "Next";
-		public string NextButtonText
-		{
-			get => _nextButtonText;
-			set
-			{
-				_nextButtonText = value;
-				this.OnPropertyChanged("NextButtonText");
-			}
-		}
-
-
-
-		public PaymentMethodViewModel(IViewNavigation navigation)
-		{
+			_apiClient=apiClient;
 			_navigation = navigation;
+			PayByCashCommand = new Command(PayByCash, CanPayByCash);
+			PayByCardCommand = new Command(PayByCard, CanPayByCard);
 			NavigateMainMenuCommand = new Command(NavigateMainMenu, CanNavigateMainMenu);
 			NavigateNextCommand = new Command(NavigateNext, CanNavigateNext);
 			NavigateBackCommand = new Command(NavigateBack, CanNavigateBack);
-
-			Services = new ObservableCollection<ServiceOption>
-		{
-			new ServiceOption { Name = "Money Transfer" },
-			new ServiceOption { Name = "Bill Payment" },
-			new ServiceOption { Name = "Mobile Recharge" },
-			new ServiceOption { Name = "Open Account" },
-			new ServiceOption { Name = "Update ID" },
-			new ServiceOption { Name = "Other Services" }
-		};
-
-
-			SelectedServiceCommand = new Command<ServiceOption>(OnServiceSelected);
 		}
-		private void OnServiceSelected(ServiceOption selectedService)
-		{
-			if (selectedService == null)
-				return;
 
-			
-		}
+		#endregion Constructor
+
+		#region Private Methods	
 
 		private void NavigateMainMenu(object obj)
 		{
 			_navigation.NavigateTo<HomeViewModel>();
+		}
+		private void NavigateNext(object obj)
+		{
+			_navigation.NavigateTo<InsertCashViewModel>();
+		}
+		private void NavigateBack(object obj)
+		{
+			_navigation.NavigateBack();
+		}
+
+		private void PayByCash(object obj)
+		{
+			SelectedPaymentMethod = "Cash";
+		}
+
+		private void PayByCard(object obj)
+		{
+			SelectedPaymentMethod = "Card";
+		}
+
+		private bool CanPayByCard(object obj)
+		{
+			return true;
+		}
+		private bool CanPayByCash(object obj)
+		{
+			return true;
 		}
 
 		private bool CanNavigateMainMenu(object obj)
@@ -116,20 +160,10 @@ namespace iKiosk.UI.ViewModels
 
 		}
 
-		private void NavigateNext(object obj)
-		{
-			_navigation.NavigateTo<InsertCashViewModel>();
-		}
-
 		private bool CanNavigateNext(object obj)
 		{
 			return true;
 
-		}
-
-		private void NavigateBack(object obj)
-		{
-			_navigation.NavigateBack();
 		}
 
 		private bool CanNavigateBack(object obj)
@@ -137,6 +171,8 @@ namespace iKiosk.UI.ViewModels
 			return true;
 
 		}
+
+		#endregion Private Methods
 	}
 
 }

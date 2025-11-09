@@ -22,114 +22,121 @@ namespace iKiosk.UI.ViewModels
 {
 	public class AmountCalculationViewModel : ViewModelControlBase
 	{
+		#region Private Fields
+
 		private readonly IApiClient _apiClient;
 		private readonly IViewNavigation _navigation;
 
-		public ObservableCollection<ServiceOption> Services { get; set; }
+		private string _NextButtonText = "Next";
 
-		public ICommand SelectedServiceCommand { get; }
+		private decimal _ExchangeRate = 100m; // 1 INR = 0.045 SAR
+		private decimal _Fee = 25m;
+		private decimal _ValueAddedTax;
+		private decimal _AmountToPay;
 
-		public ICommand NavigateMainMenuCommand { get; }
-		public ICommand NavigateNextCommand { get; }
-		public ICommand NavigateBackCommand { get; }
+		private bool _IsMainMenuVisible = true;
+		private bool _IsBackVisible = true;
+		private bool _IsNextVisible = true;
 
+		#endregion Private Fields 		
 
-		private int _ExchangeRate;
+		#region Public Properties
 
-		public int ExchangeRate
+		public decimal ExchangeRate
 		{
 			get { return _ExchangeRate; }
-			set 
-			{ 
-				_ExchangeRate = value; 
-				OnPropertyChanged("ExchangeRate");
-			}
-		}
-
-		private int _Fee;
-
-		public int Fee
-		{
-			get { return _Fee; }
-			set 
-			{ 
-				_Fee = value; 
-				OnPropertyChanged("Fee");
-			}
-		}
-
-		private int _ValueAddedTax;
-
-		public int ValueAddedTax
-		{
-			get { return _ValueAddedTax; }
-			set 
-			{ 
-				_ValueAddedTax = value;
-				OnPropertyChanged("ValueAddedTax");
-			}
-		}
-
-		private int _AmountToPay;
-
-		public int AmountToPay
-		{
-			get { return _AmountToPay; }
-			set 
-			{ 
-				_AmountToPay = value; 
-				OnPropertyChanged("AmountToPay");
-			}
-		}
-
-
-
-
-		private bool _isMainMenuVisible = true;
-		public bool IsMainMenuVisible
-		{
-			get => _isMainMenuVisible;
 			set
 			{
-				_isMainMenuVisible = value;
+				_ExchangeRate = value;
+				OnPropertyChanged(nameof(ExchangeRate));
+				CalculateTotals();
+			}
+		}
+
+		public decimal Fee
+		{
+			get { return _Fee; }
+			set
+			{
+				_Fee = value;
+				OnPropertyChanged(nameof(Fee));
+				CalculateTotals();
+			}
+		}
+
+		public decimal ValueAddedTax
+		{
+			get { return _ValueAddedTax; }
+		    set
+			{
+				_ValueAddedTax = value;
+				OnPropertyChanged(nameof(ValueAddedTax));
+				CalculateTotals();
+			}
+		}
+
+		public decimal AmountToPay
+		{
+			get { return _AmountToPay; }
+		    set
+			{
+				_AmountToPay = value;
+				OnPropertyChanged(nameof(AmountToPay));
+			}
+		}
+
+		public bool IsMainMenuVisible
+		{
+			get { return _IsMainMenuVisible; }
+			set
+			{
+				_IsMainMenuVisible = value;
 				this.OnPropertyChanged("IsMainMenuVisible");
 			}
 		}
 
-		private bool _isBackVisible = true;
 		public bool IsBackVisible
 		{
-			get => _isBackVisible;
+			get { return _IsBackVisible; }
 			set
 			{
-				_isBackVisible = value;
+				_IsBackVisible = value;
 				this.OnPropertyChanged("IsBackVisible");
 			}
 		}
 
-		private bool _isNextVisible = true;
 		public bool IsNextVisible
 		{
-			get => _isNextVisible;
+			get { return _IsNextVisible; }
 			set
 			{
-				_isNextVisible = value;
+				_IsNextVisible = value;
 				this.OnPropertyChanged("IsNextVisible");
 			}
 		}
 
-		private string _nextButtonText = "Next";
 		public string NextButtonText
 		{
-			get => _nextButtonText;
+			get { return _NextButtonText; }
 			set
 			{
-				_nextButtonText = value;
+				_NextButtonText = value;
 				this.OnPropertyChanged("NextButtonText");
 			}
 		}
 
+		#endregion Public Properties
 
+		#region Commands
+
+		public ICommand SelectedServiceCommand { get; }
+		public ICommand NavigateMainMenuCommand { get; }
+		public ICommand NavigateNextCommand { get; }
+		public ICommand NavigateBackCommand { get; }
+
+		#endregion Commands
+
+		#region Constructor
 
 		public AmountCalculationViewModel(IViewNavigation navigation, IApiClient apiClient)
 		{
@@ -138,21 +145,32 @@ namespace iKiosk.UI.ViewModels
 			NavigateMainMenuCommand = new Command(NavigateMainMenu, CanNavigateMainMenu);
 			NavigateNextCommand = new Command(NavigateNext, CanNavigateNext);
 			NavigateBackCommand = new Command(NavigateBack, CanNavigateBack);
-
-			SelectedServiceCommand = new Command<ServiceOption>(OnServiceSelected);
+			CalculateTotals();
 		}
 
+		#endregion Constructor
+
+		#region Public Methods
 		public override void ViewModelLoaded(object message)
 		{
 			
 		}
 
-		private void OnServiceSelected(ServiceOption selectedService)
-		{
-			if (selectedService == null)
-				return;
+		#endregion Public Methods
 
-			
+		#region Private Methods
+
+		private async void CalculateTotals()
+		{
+			var response = await _apiClient.CalculateRemittanceAsync(new RemittanceCalculationRequest
+			{
+				ExchangeRate = ExchangeRate,
+				Fee = Fee,
+				VatRate = ValueAddedTax,
+				AmountToSend = AmountToPay
+			}); 
+			ValueAddedTax = response.Data.ValueAddedTax;
+			AmountToPay = response.Data.AmountToPay;
 		}
 
 		private void NavigateMainMenu(object obj)
@@ -160,21 +178,9 @@ namespace iKiosk.UI.ViewModels
 			_navigation.NavigateTo<HomeViewModel>();
 		}
 
-		private bool CanNavigateMainMenu(object obj)
-		{
-			return true;
-
-		}
-
 		private void NavigateNext(object obj)
 		{
 			_navigation.NavigateTo<PaymentMethodViewModel>();
-		}
-
-		private bool CanNavigateNext(object obj)
-		{
-			return true;
-
 		}
 
 		private void NavigateBack(object obj)
@@ -182,11 +188,24 @@ namespace iKiosk.UI.ViewModels
 			_navigation.NavigateBack();
 		}
 
+		private bool CanNavigateNext(object obj)
+		{
+			return true;
+
+		}
+		private bool CanNavigateMainMenu(object obj)
+		{
+			return true;
+
+		}
+
 		private bool CanNavigateBack(object obj)
 		{
 			return true;
 
 		}
+
+		#endregion Private Methods
 	}
 
 }

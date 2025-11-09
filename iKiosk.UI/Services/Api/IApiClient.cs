@@ -7,5 +7,6 @@ namespace iKiosk.UI.Services.Api
 		Task<ApiResult<IEnumerable<LanguageOption>>> GetLanguagesAsync();
 		Task<ApiResult<PersonalDetailResponse>> VerifyPersonalDetailsAsync(PersonalDetailRequest request);
 		Task<ApiResult<IEnumerable<ServiceOption>>> GetServicesAsync();
+		Task<ApiResult<RemittanceCalculationResponse>> CalculateRemittanceAsync(RemittanceCalculationRequest request);
 	}
 }

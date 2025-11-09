@@ -91,5 +91,28 @@ namespace iKiosk.Logic
 						new ServiceOption { Name = "Other Services" }
 					};
 		}
+
+		public RemittanceCalculationResponse CalculateRemittance(RemittanceCalculationRequest request)
+		{
+			if (request == null)
+				throw new ArgumentNullException(nameof(request));
+
+			if (request.ExchangeRate <= 0)
+				throw new ArgumentException("Exchange rate must be greater than zero.");
+
+			var vat = Math.Round(request.Fee * request.VatRate, 2, MidpointRounding.AwayFromZero);
+
+			var amountInSar = Math.Round(request.AmountToSend / request.ExchangeRate, 2, MidpointRounding.AwayFromZero);
+
+			var totalAmount = Math.Round(amountInSar + request.Fee + vat, 2, MidpointRounding.AwayFromZero);
+
+			return new RemittanceCalculationResponse
+			{
+				ValueAddedTax = vat,
+				AmountToPay = totalAmount
+			};
+		}
+
+
 	}
 }

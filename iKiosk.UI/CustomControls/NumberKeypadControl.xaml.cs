@@ -50,6 +50,27 @@ namespace iKiosk.UI.CustomControls
 				_activeTextBox.Text = _activeTextBox.Text.Insert(index, key);
 				_activeTextBox.SelectionStart = index + 1;
 			}
+
+			if (_activeTextBox.Tag?.ToString() == "txtDateOfBirth")
+			{
+				_activeTextBox.Text = FormatDateInput(_activeTextBox.Text);
+				_activeTextBox.SelectionStart = _activeTextBox.Text.Length;
+			}
+		}
+
+		private string FormatDateInput(string input)
+		{
+			input = new string(input.Where(char.IsDigit).ToArray());
+
+			if (input.Length > 8)
+				input = input.Substring(0, 8);
+
+			if (input.Length > 4)
+				return $"{input.Substring(0, 2)}/{input.Substring(2, 2)}/{input.Substring(4)}";
+			if (input.Length > 2)
+				return $"{input.Substring(0, 2)}/{input.Substring(2)}";
+
+			return input;
 		}
 	}
 }

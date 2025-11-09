@@ -105,10 +105,14 @@
                         </StackPanel>
                     </Border>
 
-                    <TextBox Grid.Row="0" Grid.Column="1" Text="100 SAR" Style="{StaticResource DefaultTextBoxStyle}" Margin="0,25,0,10"/>
-                    <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource DefaultTextBoxStyle}" Margin="0,5,0,10"/>
-                    <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource DefaultTextBoxStyle}" Margin="0,0,0,10"/>
-                    <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource DefaultTextBoxStyle}" Margin="0,0,0,10"/>
+                    <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding ExchangeRate, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             Style="{StaticResource DefaultTextBoxStyle}" Margin="0,25,0,10"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Fee, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                             Style="{StaticResource DefaultTextBoxStyle}" Margin="0,5,0,10"/>
+                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ValueAddedTax}"
+                             Style="{StaticResource DefaultTextBoxStyle}" Margin="0,0,0,10"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding AmountToPay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource DefaultTextBoxStyle}" Margin="0,0,0,10"/>
                     
                 </StackPanel>
 
