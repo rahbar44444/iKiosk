@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Header_SelectLanguage">اختر اللغة</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">أدخل التفاصيل الشخصية</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">أدخل رقم الهوية السعودية / الإقامة</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">تاريخ الميلاد</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">عزيزي مصطفى تاج، انتهت صلاحية هويتك الوطنية / الإقامة الخاصة بك.&#x0A;
+الوطنية / الإقامة على منصة أبشر، يرجى زيارة أقرب فرع۔&#x0A; إذا قمت بتحديث هويتك.
+    </sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">الرئيسية&#x0A;الشاشة</sys:String>
+    <sys:String x:Key="MainContent_Update">تحديث</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">اختر الخدمة</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">الرجاء اختيار الخدمة</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">المبلغ المراد إرساله</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">سعر الصرف</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">الرسوم (خاضعة للضريبة)</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">ضريبة القيمة المضافة</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">المبلغ المستحق للدفع</sys:String>
+    <sys:String x:Key="MainContent_Sender">المرسل</sys:String>
+    <sys:String x:Key="MainContent_Receiver">المستلم</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">يرجى اختيار طريقة الدفع</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">الدفع نقدًا</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">الدفع ببطاقة</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">أدخل النقود هنا</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">المبلغ الإجمالي</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">المبلغ المدخل</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">المبلغ المتبقي</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">القائمة&#x0a;الرئيسية</sys:String>
+    <sys:String x:Key="Footer_Back">رجوع</sys:String>
+    <sys:String x:Key="Footer_Next">التالي</sys:String>
+</ResourceDictionary>

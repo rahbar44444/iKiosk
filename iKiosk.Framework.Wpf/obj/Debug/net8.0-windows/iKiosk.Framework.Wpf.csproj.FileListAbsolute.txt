@@ -1,0 +1,11 @@
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\bin\Debug\net8.0-windows\iKiosk.Framework.Wpf.deps.json
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\bin\Debug\net8.0-windows\iKiosk.Framework.Wpf.dll
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\bin\Debug\net8.0-windows\iKiosk.Framework.Wpf.pdb
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.AssemblyInfoInputs.cache
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.AssemblyInfo.cs
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.csproj.CoreCompileInputs.cache
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.dll
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\refint\iKiosk.Framework.Wpf.dll
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\iKiosk.Framework.Wpf.pdb
+C:\_Demo\iKiosk\iKiosk.Framework.Wpf\obj\Debug\net8.0-windows\ref\iKiosk.Framework.Wpf.dll

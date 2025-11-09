@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "iKiosk.Framework.Wpf/1.0.0": {
+        "runtime": {
+          "iKiosk.Framework.Wpf.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "iKiosk.Framework.Wpf/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

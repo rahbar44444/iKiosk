@@ -1,0 +1,94 @@
+﻿<fx:ViewControl x:Class="iKiosk.UI.Views.ServiceView"
+                xmlns:fx="clr-namespace:iKiosk.Framework.Wpf;assembly=iKiosk.Framework.Wpf"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
+                xmlns:conv="clr-namespace:iKiosk.UI.Converters">
+    <fx:ViewControl.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </fx:ViewControl.Resources>
+    <controls:KioskLayout>
+        <controls:KioskLayout.Resources>
+            
+        </controls:KioskLayout.Resources>
+
+        <!-- Custom header -->
+        <controls:KioskLayout.HeaderContent>
+          
+                <StackPanel Orientation="Horizontal"
+                    VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                    Margin="30,10">
+                <Image Source="/iKiosk.UI;component/Images/personal_detail.png"
+                   Width="40"
+                   Height="40"
+                   Margin="0,0,10,0"/>
+                <TextBlock Text="{DynamicResource MainContent_ChooseService}"
+                       VerticalAlignment="Center"
+                       FontFamily="Century Gothic"
+                       FontSize="28"
+                       FontWeight="SemiBold"
+                       Foreground="{DynamicResource PrimaryOrangeBrush}"/>
+                </StackPanel>
+           
+        </controls:KioskLayout.HeaderContent>
+
+
+        <!-- Main content -->
+        <controls:KioskLayout.MainContent>
+            <Grid>
+                <Border CornerRadius="20"
+                Background="White"
+                Padding="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Effect="{DynamicResource DefaultShadowEffect}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <!-- Title -->
+                        <TextBlock Text="{DynamicResource MainContent_ChooseServiceTitle}"
+                           FontFamily="{StaticResource PrimaryFontFamily}"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Foreground="{StaticResource PrimaryBlackBrush}"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Bottom"
+                                   Margin="50 0 0 0"
+                           TextAlignment="Center"/>
+
+                        <!-- Service Buttons -->
+                        <ItemsControl Grid.Row="0" Grid.RowSpan="2" ItemsSource="{Binding Services}" VerticalAlignment="Top">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <!-- 2 rows, 4 columns -->
+                                    <UniformGrid Rows="2" Columns="3"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Center"
+                     Margin="25 50 50 50"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <ToggleButton Content="{Binding Name}" 
+                                                  Height="80" 
+                                                  Width="190" 
+                                                  Margin="20" FontSize="18" FontWeight="Normal" BorderThickness="3"
+                                                  Style="{DynamicResource SelectableButtonStyle}"
+                                  Command="{Binding DataContext.SelectedServiceCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                  CommandParameter="{Binding}"
+                                  IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                    </ToggleButton>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </Border>
+            </Grid>
+        </controls:KioskLayout.MainContent>      
+
+    </controls:KioskLayout>
+</fx:ViewControl>

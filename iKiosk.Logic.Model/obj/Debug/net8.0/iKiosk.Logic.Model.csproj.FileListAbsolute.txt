@@ -1,0 +1,11 @@
+C:\_Demo\iKiosk\iKiosk.Logic.Model\bin\Debug\net8.0\iKiosk.Logic.Model.deps.json
+C:\_Demo\iKiosk\iKiosk.Logic.Model\bin\Debug\net8.0\iKiosk.Logic.Model.dll
+C:\_Demo\iKiosk\iKiosk.Logic.Model\bin\Debug\net8.0\iKiosk.Logic.Model.pdb
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\iKiosk.Logic.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\iKiosk.Logic.Model.AssemblyInfoInputs.cache
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\iKiosk.Logic.Model.AssemblyInfo.cs
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\iKiosk.Logic.Model.csproj.CoreCompileInputs.cache
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\iKiosk.Logic.Model.dll
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\refint\iKiosk.Logic.Model.dll
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\iKiosk.Logic.Model.pdb
+C:\_Demo\iKiosk\iKiosk.Logic.Model\obj\Debug\net8.0\ref\iKiosk.Logic.Model.dll

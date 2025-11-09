@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "iKiosk.Startup\\iKiosk.Startup.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "iKiosk.API\\iKiosk.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

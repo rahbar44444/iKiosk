@@ -1,0 +1,93 @@
+﻿<fx:ViewControl x:Class="iKiosk.UI.Views.PaymentMethodView"
+                xmlns:fx="clr-namespace:iKiosk.Framework.Wpf;assembly=iKiosk.Framework.Wpf"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
+                xmlns:conv="clr-namespace:iKiosk.UI.Converters">
+
+    <fx:ViewControl.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </fx:ViewControl.Resources>
+
+    <controls:KioskLayout>
+        <!-- ✅ Header -->
+        <controls:KioskLayout.HeaderContent>
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="30,10">
+                <Image Source="/iKiosk.UI;component/Images/personal_detail.png"
+                       Width="40"
+                       Height="40"
+                       Margin="0,0,10,0"/>
+                <TextBlock Text="{DynamicResource MainContent_AmountToSend}"
+                           VerticalAlignment="Center"
+                           FontFamily="{StaticResource PrimaryFontFamily}"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Foreground="{DynamicResource PrimaryOrangeBrush}"/>
+            </StackPanel>
+        </controls:KioskLayout.HeaderContent>
+
+        <!-- ✅ Main Content -->
+        <controls:KioskLayout.MainContent>
+            <Grid Margin="50">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/iKiosk.UI;component/Images/background.jpg"
+                                Stretch="UniformToFill"/>
+                </Grid.Background>
+
+                <!-- White card -->
+                <Border Background="{StaticResource PrimaryWhiteBrush}"
+                        CornerRadius="20"
+                        Padding="40"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="700"
+                        Effect="{DynamicResource CardShadow}">
+
+                    <StackPanel Orientation="Vertical"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Margin="30">
+
+                        <!-- Title -->
+                        <TextBlock Text="{DynamicResource MainContent_PleaseSelectPaymentMethod}"
+                                   FontFamily="{StaticResource PrimaryFontFamily}"
+                                   FontSize="24"
+                                   Foreground="{StaticResource PrimaryBlackBrush}"
+                                   TextAlignment="Left"
+                                   Margin="20,0,0,10"/>
+
+                        <!-- Buttons Layout -->
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Margin="20">
+
+                            <!-- Pay by Cash -->
+                            <controls:IconButton Width="225"
+                                                 Height="150"
+                                                 BorderThickness="2"
+                                                 Text="{DynamicResource MainContent_PayByCash}"
+                                                 IconPlacement="Top"
+                                                 IconSource="/iKiosk.UI;component/Images/cash.jpg"
+                                                 Style="{StaticResource PaymentChoiceIconButton}"
+                                                 Command="{Binding PayByCashCommand}"/>
+
+                            <!-- Pay by Card -->
+                            <controls:IconButton Width="225"
+                                                 Height="150"
+                                                 Margin="30 0 0 0"
+                                                 BorderThickness="2"
+                                                 Text="{DynamicResource MainContent_PayByCard}"
+                                                 IconSource="/iKiosk.UI;component/Images/card.jpg"
+                                                 Style="{StaticResource PaymentChoiceIconButton}"
+                                                 Command="{Binding PayByCardCommand}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </controls:KioskLayout.MainContent>
+    </controls:KioskLayout>
+</fx:ViewControl>

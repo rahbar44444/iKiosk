@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Header_SelectLanguage">भाषा चुनें</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">व्यक्तिगत विवरण दर्ज करें</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">सऊदी आईडी / इकामा आईडी दर्ज करें</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">प्रिय मुस्तफा ताज, आपकी राष्ट्रीय आईडी / इक़ामा की अवधि समाप्त हो गई है।&#x0A;
+यदि आपने अबशर प्लेटफ़ॉर्म पर अपनी राष्ट्रीय आईडी / इक़ामा अपडेट की है, तो कृपया&#x0A; निकटतम शाखा पर जाएँ।
+    </sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">मुख्य&#x0A;स्क्रीन</sys:String>
+    <sys:String x:Key="MainContent_Update">अद्यतन</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">जन्म तिथि</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">सेवा चुनें</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">कृपया अपनी सेवा चुनें</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">भेजी जाने वाली राशि</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">विनिमय दर</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">शुल्क (कर योग्य)</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">मूल्य संवर्धित कर</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">भुगतान करने योग्य राशि</sys:String>
+    <sys:String x:Key="MainContent_Sender">प्रेषक</sys:String>
+    <sys:String x:Key="MainContent_Receiver">प्राप्तकर्ता</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">कृपया भुगतान विधि चुनें</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">नकद से भुगतान करें</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">कार्ड से भुगतान करें</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">यहां नकद डालें</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">कुल राशि</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">डाली गई राशि</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">शेष राशि</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">मुख्य&#x0a;मेनू</sys:String>
+    <sys:String x:Key="Footer_Back">वापस</sys:String>
+    <sys:String x:Key="Footer_Next">आगे</sys:String>
+    
+</ResourceDictionary>

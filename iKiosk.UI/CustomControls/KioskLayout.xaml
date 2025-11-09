@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="iKiosk.UI.CustomControls.KioskLayout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
+             xmlns:conv="clr-namespace:iKiosk.UI.Converters"
+             x:Name="root"
+             mc:Ignorable="d"
+             Background="White">
+    <UserControl.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <conv:BoolToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <!-- Background -->
+        <Grid.Background>
+            <ImageBrush ImageSource="/iKiosk.UI;component/Images/background.jpg"
+                        Stretch="UniformToFill"
+                        AlignmentX="Center"
+                        AlignmentY="Center" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Header -->
+            <RowDefinition Height="*"/>
+            <!-- Main -->
+            <RowDefinition Height="Auto"/>
+            <!-- Footer -->
+        </Grid.RowDefinitions>
+
+        <!-- Header slot -->
+        <!--<Border Grid.Row="0"
+                Background="{StaticResource PrimaryWhiteBrush}"
+                Padding="20,10"
+                BorderThickness="0,0,0,2"
+                BorderBrush="{StaticResource PrimaryBlackBrush}"
+                Visibility="{Binding IsHeaderVisible, ElementName=root, Converter={StaticResource BoolToVisibilityConverter}}">
+            <DockPanel LastChildFill="True">
+
+                --><!-- Image (optional) --><!--
+                <Image Width="60"
+                       Height="60"
+                       Margin="0,0,10,0"
+                       Source="{Binding HeaderImageSource, ElementName=root}"
+                       Visibility="{Binding HeaderImageSource, ElementName=root, Converter={StaticResource NullToVisibilityConverter}}"
+                       DockPanel.Dock="Left"
+                       Stretch="Uniform"/>
+
+                --><!-- Text --><!--
+                <TextBlock Text="{Binding HeaderText, ElementName=root}"
+                           FontFamily="{StaticResource PrimaryFontFamily}"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Foreground="{StaticResource PrimaryBlackBrush}"
+                           VerticalAlignment="Center"
+                           TextWrapping="Wrap"/>
+            </DockPanel>
+        </Border>-->
+        <ContentPresenter Grid.Row="0"
+                          Content="{Binding HeaderContent, ElementName=root}"
+                          VerticalAlignment="Top"
+                          Margin="0,10,0,10"/>
+
+        <!-- Main content slot -->
+        <ContentPresenter Grid.Row="1"
+                          Content="{Binding MainContent, ElementName=root}"
+                          VerticalAlignment="Stretch"
+                          Margin="20,0"/>
+
+        <!-- Footer -->
+        <Border Grid.Row="2"
+                BorderThickness="0,2,0,0"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0,0,0,10">
+
+                <!-- Main Menu Button -->
+                <controls:IconButton Width="200"
+                                     Height="80" BorderThickness="4"
+                                     Margin="10,0"
+                                     Text="{DynamicResource Footer_MainMenu}"
+                                     IconWidth="150"
+                                     IconHeight="150"
+                                     IconSource="/iKiosk.UI;component/Images/home.png"
+                                     Command="{Binding DataContext.NavigateMainMenuCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"                                     
+                                     Style="{DynamicResource IconButtonStyle}"
+                                     Visibility="{Binding IsMainMenuVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                <!-- Back Button -->
+                <controls:IconButton Width="200"
+                                     Height="80" BorderThickness="4"
+                                     Margin="10,0"
+                                     Text="{DynamicResource Footer_Back}"
+                                     IconSource="/iKiosk.UI;component/Images/back.png"
+                                     Command="{Binding DataContext.NavigateBackCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"
+                                     Style="{DynamicResource IconButtonStyle}"
+                                     Visibility="{Binding IsBackVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                <!-- Next Button -->
+                <controls:IconButton Width="200"
+                                     Height="80" BorderThickness="4"
+                                     Margin="10,0"
+                                     Text="{DynamicResource Footer_Next}"
+                                     IconSource="/iKiosk.UI;component/Images/next.png"
+                                     Command="{Binding DataContext.NavigateNextCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"
+                                     Style="{DynamicResource IconButtonStyle}"
+                                     Visibility="{Binding IsNextVisible, Converter={StaticResource BoolToVisibilityConverter}}"
+                                     IsEnabled="{Binding IsNextEnabled}"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

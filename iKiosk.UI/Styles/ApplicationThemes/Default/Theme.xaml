@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Colors.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Brushes.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Fonts.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Buttons.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/IconButtons.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/TextBoxStyle.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Textblock.xaml"/>
+
+
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

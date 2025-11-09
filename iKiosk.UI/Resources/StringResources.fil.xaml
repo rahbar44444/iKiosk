@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                                        xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Header_SelectLanguage">Piliin ang Wika</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">Ipasok ang mga personal na detalye</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">Ipasok ang Saudi ID / Iqama ID</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Mahal na Mustafa Taj, ang iyong National ID/Iqama ay nag-expire na.&#x0A;
+Kung na-update mo ang iyong National ID/Iqama sa Absher platform, mangyaring&#x0A; bumisita sa pinakamalapit na sangay.
+    </sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Pangunahing&#x0A;Screen</sys:String>
+    <sys:String x:Key="MainContent_Update">I-update</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">Petsa ng Kapanganakan</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">Pumili ng Serbisyo</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">Paki pili ang iyong serbisyo</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">Halagang ipapadala</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">Palitan ng rate</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">Bayad (napapailalim sa buwis)</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">Buwis na idinagdag sa halaga</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">Halagang babayaran</sys:String>
+    <sys:String x:Key="MainContent_Sender">Nagpadala</sys:String>
+    <sys:String x:Key="MainContent_Receiver">Tatanggap</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">Paki piliin ang paraan ng pagbabayad</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">Magbayad ng cash</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">Magbayad gamit ang card</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">Ipasok ang pera dito</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">Kabuuang halaga</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">Ipinasok na halaga</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">Natitirang halaga</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">Pangunahing&#x0a;Menu</sys:String>
+    <sys:String x:Key="Footer_Back">Bumalik</sys:String>
+    <sys:String x:Key="Footer_Next">Susunod</sys:String>
+
+
+</ResourceDictionary>

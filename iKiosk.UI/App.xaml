@@ -1,0 +1,17 @@
+﻿<Application x:Class="iKiosk.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:iKiosk.UI"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Styles/ApplicationThemes/Default/Theme.xaml"/>
+                <!--<ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Colors.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Brushes.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Fonts.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/iKiosk.UI;component/Styles/ApplicationThemes/Default/Buttons.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

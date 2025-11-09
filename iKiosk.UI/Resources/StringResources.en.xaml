@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String x:Key="Header_SelectLanguage">Select Language</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">Enter personal details</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">Enter Saudi ID / Iqama ID</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">Date of Birth</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Dear Mustafa Taj, your national ID/Iqama is expired.&#x0A;
+If you updated your national ID/Iqama in Absher platform, please&#x0A; visit the nearest branch.
+    </sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Main&#x0A;Screen</sys:String>
+    <sys:String x:Key="MainContent_Update">Update</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">Choose Service</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">Please choose your service</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">Amount to send</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">Exchange Rate</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">Fee (Taxable)</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">Value Added Tax</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">Amount to Pay</sys:String>
+    <sys:String x:Key="MainContent_Sender">Sender</sys:String>
+    <sys:String x:Key="MainContent_Receiver">Receiver</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">Please select payment method</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">Pay by cash</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">Pay by card</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">Insert cash here</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">Total amount</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">Inserted amount</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">Remaining amount</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">Main&#x0A;Menu</sys:String>
+    <sys:String x:Key="Footer_Back">Back</sys:String>
+    <sys:String x:Key="Footer_Next">Next</sys:String>
+</ResourceDictionary>

@@ -1,0 +1,136 @@
+﻿<fx:ViewControl x:Class="iKiosk.UI.Views.InsertCashView"
+                xmlns:fx="clr-namespace:iKiosk.Framework.Wpf;assembly=iKiosk.Framework.Wpf"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
+                xmlns:conv="clr-namespace:iKiosk.UI.Converters">
+
+    <fx:ViewControl.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </fx:ViewControl.Resources>
+
+    <controls:KioskLayout>
+        <!-- Header -->
+        <controls:KioskLayout.HeaderContent>
+            <StackPanel Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="30,10">
+                <Image Source="/iKiosk.UI;component/Images/personal_detail.png"
+                       Width="40" Height="40"
+                       Margin="0,0,10,0"/>
+                <TextBlock Text="{DynamicResource MainContent_AmountToSend}"
+                           VerticalAlignment="Center"
+                           FontFamily="{StaticResource PrimaryFontFamily}"
+                           FontSize="28"
+                           FontWeight="SemiBold"
+                           Foreground="{DynamicResource PrimaryOrangeBrush}"/>
+            </StackPanel>
+        </controls:KioskLayout.HeaderContent>
+
+        <!-- Main Content -->
+        <controls:KioskLayout.MainContent>
+            <Grid Margin="50">
+                <Grid.Background>
+                    <ImageBrush ImageSource="/iKiosk.UI;component/Images/background.jpg"
+                                Stretch="UniformToFill"/>
+                </Grid.Background>
+
+                <Border Background="{StaticResource PrimaryWhiteBrush}"
+                        CornerRadius="20"
+                        Padding="40"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="800"
+                        Height="400"
+                        Effect="{DynamicResource CardShadow}">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="1.7*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Left side -->
+                        <StackPanel Grid.Column="0" Grid.ColumnSpan="2"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Width="Auto">
+
+                            <!-- Title -->
+                            <TextBlock Text="{DynamicResource MainContent_InsertCashHere}"
+                                       FontFamily="{StaticResource PrimaryFontFamily}"
+                                       FontSize="30"
+                                       Foreground="{StaticResource PrimaryBlackBrush}"
+                                       Margin="0,0,0,25"/>
+
+                            <!-- Fields -->
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="75"/>
+                                    <RowDefinition Height="75"/>
+                                    <RowDefinition Height="75"/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Labels -->
+                                <TextBlock Grid.Row="0" Grid.Column="0"
+                                           Text="{DynamicResource MainContent_TotalAmount}"
+                                           Style="{StaticResource TextblockStyle}" Foreground="{StaticResource PrimaryBlackBrush}"
+                                           Margin="0,0,10,10"/>
+                                <TextBlock Grid.Row="1" Grid.Column="0"
+                                           Text="{DynamicResource MainContent_InsertedAmount}"
+                                           Style="{StaticResource TextblockStyle}" Foreground="{StaticResource PrimaryBlackBrush}"
+                                           Margin="0,0,10,10"/>
+                                <TextBlock Grid.Row="2" Grid.Column="0"
+                                           Text="{DynamicResource MainContent_RemainingAmount}"
+                                           Style="{StaticResource TextblockStyle}" Foreground="{StaticResource PrimaryBlackBrush}"
+                                           Margin="0,0,10,10"/>
+
+                                <!-- Amount TextBoxes -->
+                                <TextBox Grid.Row="0" Grid.Column="1"
+                                         Text="10.00 SAR"
+                                         Style="{DynamicResource BoldBorderTextBoxStyle}"
+                                         Height="60"
+                                         FontWeight="Bold"
+                                         HorizontalContentAlignment="Left"
+                                         Padding="5 15 0 0"
+                                         Margin="10,0,0,10"/>
+                                <TextBox Grid.Row="1" Grid.Column="1"
+                                         Text="10.00 SAR"
+                                         Style="{DynamicResource BoldBorderTextBoxStyle}"
+                                         Height="60"
+                                         FontWeight="Bold"
+                                         HorizontalContentAlignment="Left"
+                                         Padding="5 15 0 0"
+                                         Margin="10,0,0,10"/>
+                                <TextBox Grid.Row="2" Grid.Column="1"
+                                         Text="0.00 SAR"
+                                         Style="{DynamicResource BoldBorderTextBoxStyle}"
+                                         Height="60"
+                                         FontWeight="Bold"
+                                         HorizontalContentAlignment="Left"
+                                         Padding="5 15 0 0"
+                                         Margin="10,0,0,10"/>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Right side: ATM image -->
+                        <Image Grid.Column="2" 
+                               Source="/iKiosk.UI;component/Images/machine.jpg"
+                               Width="250"
+                               Height="350"
+                               Margin="0 50 0 0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Stretch"/>
+                    </Grid>
+                </Border>
+            </Grid>
+        </controls:KioskLayout.MainContent>
+    </controls:KioskLayout>
+</fx:ViewControl>

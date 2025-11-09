@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "iKiosk.Logic/1.0.0": {
+        "dependencies": {
+          "iKiosk.Logic.Model": "1.0.0"
+        },
+        "runtime": {
+          "iKiosk.Logic.dll": {}
+        }
+      },
+      "iKiosk.Logic.Model/1.0.0": {
+        "runtime": {
+          "iKiosk.Logic.Model.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "iKiosk.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "iKiosk.Logic.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

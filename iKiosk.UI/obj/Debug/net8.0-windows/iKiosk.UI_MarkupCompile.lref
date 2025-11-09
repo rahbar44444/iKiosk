@@ -1,0 +1,17 @@
+﻿
+FC:\_Demo\iKiosk\iKiosk.UI\App.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\CustomControls\KioskLayout.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\CustomControls\NumberKeypadControl.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\MainWindow.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Styles\ApplicationThemes\Default\Buttons.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Styles\ApplicationThemes\Default\IconButtons.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Themes\Generic.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\AmountCalculationView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\ExpiredView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\HomeView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\InsertCashView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\LanguageView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\PaymentMethodView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\PersonalDetailsView.xaml;;
+FC:\_Demo\iKiosk\iKiosk.UI\Views\ServiceView.xaml;;
+

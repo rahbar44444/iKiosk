@@ -1,0 +1,54 @@
+﻿<Window x:Class="iKiosk.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iKiosk.UI"
+        xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
+        xmlns:viewModels="clr-namespace:iKiosk.UI.ViewModels"
+        xmlns:views="clr-namespace:iKiosk.UI.Views"
+        mc:Ignorable="d"
+        x:Name="mainWindow"
+        Title="iKIOSK" Height="450" Width="800">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+        <DataTemplate DataType="{x:Type viewModels:HomeViewModel}">
+            <views:HomeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:LanguageViewModel}">
+            <views:LanguageView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:PersonalDetailsViewModel}">
+            <views:PersonalDetailsView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:ExpiredViewModel}">
+            <views:ExpiredView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:ServiceViewModel}">
+            <views:ServiceView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:AmountCalculationViewModel}">
+            <views:AmountCalculationView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:PaymentMethodViewModel}">
+            <views:PaymentMethodView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModels:InsertCashViewModel}">
+            <views:InsertCashView/>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <!-- Your app content -->
+
+        <!--<Grid Visibility="{Binding ProgressVisibility, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid.Effect>
+                <BlurEffect Radius="5"/>
+            </Grid.Effect>-->
+        <controls:BusyIndicator IsBusy="{Binding ProgressVisibility, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center">
+            
+        </controls:BusyIndicator>
+        <ContentControl x:Name="cpHost" Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}}" Content="{Binding ActiveViewBase}" Margin="0,0,0,0"/>
+        <!--</Grid>-->
+    </Grid>
+
+</Window>

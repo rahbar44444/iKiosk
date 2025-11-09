@@ -1,0 +1,40 @@
+﻿<fx:ViewControl x:Class="iKiosk.UI.Views.HomeView"
+                xmlns:fx="clr-namespace:iKiosk.Framework.Wpf;assembly=iKiosk.Framework.Wpf"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                mc:Ignorable="d"
+                xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
+                d:DesignHeight="768" d:DesignWidth="1366">
+
+    <Grid>
+        <!-- Background image -->
+        <Grid.Background>
+            <ImageBrush ImageSource="/iKiosk.UI;component/Images/start.jpg"
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <!-- Layout grid: logo left, button right -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Start button -->
+        <Button Grid.Column="2"
+                Content="Start"
+                Width="260"
+                Height="90"
+                FontSize="36"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Style="{DynamicResource DefaultButtonStyle}"
+                Command="{Binding StartCommand}"/>
+
+        
+    </Grid>
+
+</fx:ViewControl>

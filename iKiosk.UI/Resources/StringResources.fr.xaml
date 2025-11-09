@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Header_SelectLanguage">Choisir la langue</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">Entrez les détails personnels</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">Saisissez l’ID saoudien / l’Iqama ID</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">Cher Mustafa Taj, votre carte d'identité nationale/Iqama a expiré.&#x0A;
+Si vous avez mis à jour votre carte d'identité/Iqama sur la plateforme Absher, veuillez&#x0A; visiter la succursale la plus proche..
+    </sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">Écran&#x0A;principal</sys:String>
+    <sys:String x:Key="MainContent_Update">Mettre à jour</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">Date de naissance</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">Choisir un service</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">Veuillez choisir votre service</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">Montant à envoyer</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">Taux de change</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">Frais (imposable)</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">Taxe sur la valeur ajoutée</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">Montant à payer</sys:String>
+    <sys:String x:Key="MainContent_Sender">Expéditeur</sys:String>
+    <sys:String x:Key="MainContent_Receiver">Destinataire</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">Veuillez sélectionner le mode de paiement</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">Payer en espèces</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">Payer par carte</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">Insérez l'argent ici</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">Montant total</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">Montant inséré</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">Montant restant</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">Menu&#x0a;principal</sys:String>
+    <sys:String x:Key="Footer_Back">Retour</sys:String>
+    <sys:String x:Key="Footer_Next">Suivant</sys:String>
+    
+</ResourceDictionary>

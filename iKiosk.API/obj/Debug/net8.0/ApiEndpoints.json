@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "iKiosk.API.Controllers.KioskController",
+    "Method": "GetAvailableLanguages",
+    "RelativePath": "api/Kiosk/languages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "iKiosk.API.Controllers.KioskController",
+    "Method": "GetAvailableServiceOptions",
+    "RelativePath": "api/Kiosk/services",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "iKiosk.API.Controllers.KioskController",
+    "Method": "VerifyPersonalDetails",
+    "RelativePath": "api/Kiosk/verify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "iKiosk.Logic.Model.PersonalDetailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

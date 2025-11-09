@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Header_SelectLanguage">ഭാഷ തിരഞ്ഞെടുക്കുക</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">വ്യക്തിഗത വിവരങ്ങൾ നൽകുക</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">സൗദി ഐഡി / ഇഖാമ ഐഡി നൽകുക</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">പ്രിയ മുസ്തഫ താജ്, നിങ്ങളുടെ നാഷണൽ ഐഡി / ഇഖാമ കാലഹരണപ്പെട്ടു.&#x0A;
+നിങ്ങൾ അബ്ഷർ പ്ലാറ്റ്ഫോമിൽ നിങ്ങളുടെ നാഷണൽ ഐഡി / ഇഖാമ അപ്‌ഡേറ്റ് ചെയ്തിട്ടുണ്ടെങ്കിൽ, ദയവായി&#x0A; ഏറ്റവും അടുത്ത ശാഖ സന്ദർശിക്കുക.
+    </sys:String>
+    <sys:String x:Key="MainContent_Update">അപ്ഡേറ്റ്</sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">മെയിൻ&#x0A;സ്ക്രീൻ</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">ജനനത്തീയതി</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">സേവനം തിരഞ്ഞെടുക്കുക</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">ദയവായി നിങ്ങളുടെ സേവനം തിരഞ്ഞെടുക്കുക</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">അയക്കേണ്ട തുക</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">വിനിമയ നിരക്ക്</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">മൂല്യവർധിത നികുതി</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">ഫീസ് (നികുതി വിധേയമാണ്)</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">അടയ്‌ക്കേണ്ട തുക</sys:String>
+    <sys:String x:Key="MainContent_Sender">അയച്ചയാൾ</sys:String>
+    <sys:String x:Key="MainContent_Receiver">സ്വീകരിക്കുന്നയാൾ</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">പേയ്മെന്റ് രീതി തിരഞ്ഞെടുക്കുക</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">പണം നൽകി അടയ്ക്കുക</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">കാർഡ് ഉപയോഗിച്ച് അടയ്ക്കുക</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">ഇവിടെ പണം നിക്ഷേപിക്കുക</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">ആകെ തുക</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">നിക്ഷേപിച്ച തുക</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">ബാക്കി തുക</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">പ്രധാന&#x0a;മെനു</sys:String>
+    <sys:String x:Key="Footer_Back">മടങ്ങുക</sys:String>
+    <sys:String x:Key="Footer_Next">അടുത്തത്</sys:String>
+    
+</ResourceDictionary>

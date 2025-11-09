@@ -1,0 +1,34 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Header_SelectLanguage">زبان منتخب کریں</sys:String>
+    <sys:String x:Key="Header_PersonalDetail">ذاتی تفصیلات درج کریں</sys:String>
+    <sys:String x:Key="MainContent_SaudiIqamaId">سعودی شناختی نمبر / اقامہ نمبر درج کریں</sys:String>
+    <sys:String x:Key="MainContent_DateOfBirth">تاریخِ پیدائش</sys:String>
+    <sys:String x:Key="MainContent_ExpiredMessage" xml:space="preserve">عزيزي مصطفى تاج، انتهت صلاحية هويتك الوطنية / الإقامة الخاصة بك.&#x0A;
+اپنی قومی شناخت / اقامہ اپ ڈیٹ کیا ہے تو براہ کرم قریبی شاخ کا دورہ کریں۔&#x0A; اگر آپ نے ابشر پلیٹ فارم پر.
+    </sys:String>
+    <sys:String x:Key="MainContent_MainScreen" xml:space="preserve">سکرین&#x0A;مرکزی</sys:String>
+    <sys:String x:Key="MainContent_Update">اپ ڈیٹ</sys:String>
+    <sys:String x:Key="MainContent_ChooseService">سروس کا انتخاب کریں</sys:String>
+    <sys:String x:Key="MainContent_ChooseServiceTitle">براہ کرم اپنی سروس منتخب کریں</sys:String>
+    <sys:String x:Key="MainContent_AmountToSend">بھیجنے کے لیے رقم</sys:String>
+    <sys:String x:Key="MainContent_ExchangeRate">تبادلہ کی شرح</sys:String>
+    <sys:String x:Key="MainContent_FeeTaxable">فیس (قابلِ ٹیکس)</sys:String>
+    <sys:String x:Key="MainContent_ValueAddedTax">ویلیو ایڈڈ ٹیکس</sys:String>
+    <sys:String x:Key="MainContent_AmountToPay">ادا کی جانے والی رقم</sys:String>
+    <sys:String x:Key="MainContent_Sender">مرسل</sys:String>
+    <sys:String x:Key="MainContent_Receiver">وصول کنندہ</sys:String>
+    <sys:String x:Key="MainContent_PleaseSelectPaymentMethod">براہ کرم ادائیگی کا طریقہ منتخب کریں</sys:String>
+    <sys:String x:Key="MainContent_PayByCash">نقد ادائیگی کریں</sys:String>
+    <sys:String x:Key="MainContent_PayByCard">کارڈ کے ذریعے ادائیگی کریں</sys:String>
+    <sys:String x:Key="MainContent_InsertCashHere">یہاں نقد رقم ڈالیں</sys:String>
+    <sys:String x:Key="MainContent_TotalAmount">کل رقم</sys:String>
+    <sys:String x:Key="MainContent_InsertedAmount">داخل کی گئی رقم</sys:String>
+    <sys:String x:Key="MainContent_RemainingAmount">بقیہ رقم</sys:String>
+    <sys:String x:Key="Footer_MainMenu" xml:space="preserve">مرکزی&#x0a;مینو</sys:String>
+    <sys:String x:Key="Footer_Back">واپس</sys:String>
+    <sys:String x:Key="Footer_Next">اگلا</sys:String>
+    
+</ResourceDictionary>

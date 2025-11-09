@@ -1,0 +1,374 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\_Demo\\iKiosk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\viewmodels\\amountcalculationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\viewmodels\\amountcalculationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\viewmodels\\personaldetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\viewmodels\\personaldetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\views\\personaldetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\views\\personaldetailsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0BD8C35-CFA5-462D-BEA9-30E14BA9A36F}|iKiosk.Logic\\iKiosk.Logic.csproj|c:\\_demo\\ikiosk\\ikiosk.logic\\kiosklogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0BD8C35-CFA5-462D-BEA9-30E14BA9A36F}|iKiosk.Logic\\iKiosk.Logic.csproj|solutionrelative:ikiosk.logic\\kiosklogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\viewmodels\\serviceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\viewmodels\\serviceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\views\\serviceview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\views\\serviceview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\services\\models\\serviceoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\services\\models\\serviceoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\styles\\applicationthemes\\default\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\styles\\applicationthemes\\default\\buttons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F10ACDC4-E746-4308-AB3F-B5C71AD1FB1A}|iKiosk.Framework.Wpf\\iKiosk.Framework.Wpf.csproj|c:\\_demo\\ikiosk\\ikiosk.framework.wpf\\viewnavigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F10ACDC4-E746-4308-AB3F-B5C71AD1FB1A}|iKiosk.Framework.Wpf\\iKiosk.Framework.Wpf.csproj|solutionrelative:ikiosk.framework.wpf\\viewnavigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\customcontrols\\kiosklayout.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\customcontrols\\kiosklayout.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\services\\api\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\services\\api\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\viewmodels\\paymentmethodviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\viewmodels\\paymentmethodviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\viewmodels\\insertcashviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\viewmodels\\insertcashviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA75E9BC-8BA3-4157-AF38-B04AD748E5D9}|iKiosk.API\\iKiosk.API.csproj|c:\\_demo\\ikiosk\\ikiosk.api\\controllers\\kioskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA75E9BC-8BA3-4157-AF38-B04AD748E5D9}|iKiosk.API\\iKiosk.API.csproj|solutionrelative:ikiosk.api\\controllers\\kioskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\viewmodels\\languageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\viewmodels\\languageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0BD8C35-CFA5-462D-BEA9-30E14BA9A36F}|iKiosk.Logic\\iKiosk.Logic.csproj|c:\\_demo\\ikiosk\\ikiosk.logic\\ikiosklogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0BD8C35-CFA5-462D-BEA9-30E14BA9A36F}|iKiosk.Logic\\iKiosk.Logic.csproj|solutionrelative:ikiosk.logic\\ikiosklogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34B0EAEF-88D9-49EC-B566-12BBAE646761}|iKiosk.Logic.Model\\iKiosk.Logic.Model.csproj|c:\\_demo\\ikiosk\\ikiosk.logic.model\\serviceoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34B0EAEF-88D9-49EC-B566-12BBAE646761}|iKiosk.Logic.Model\\iKiosk.Logic.Model.csproj|solutionrelative:ikiosk.logic.model\\serviceoption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B2DDB57-62FA-4395-86C6-EE51FFEA9711}|iKiosk.Startup\\iKiosk.Startup.csproj|c:\\_demo\\ikiosk\\ikiosk.startup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B2DDB57-62FA-4395-86C6-EE51FFEA9711}|iKiosk.Startup\\iKiosk.Startup.csproj|solutionrelative:ikiosk.startup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|c:\\_demo\\ikiosk\\ikiosk.ui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F290809-E5AE-4F23-B823-B97D7425254C}|iKiosk.UI\\iKiosk.UI.csproj|solutionrelative:ikiosk.ui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA75E9BC-8BA3-4157-AF38-B04AD748E5D9}|iKiosk.API\\iKiosk.API.csproj|c:\\_demo\\ikiosk\\ikiosk.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA75E9BC-8BA3-4157-AF38-B04AD748E5D9}|iKiosk.API\\iKiosk.API.csproj|solutionrelative:ikiosk.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServiceViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\ServiceViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\ViewModels\\ServiceViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\ServiceViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\ViewModels\\ServiceViewModel.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAkwK0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:33:10.655Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AmountCalculationViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\AmountCalculationViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\ViewModels\\AmountCalculationViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\AmountCalculationViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\ViewModels\\AmountCalculationViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:42:42.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\MainViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\MainViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\MainViewModel.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAswEwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:57:11.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Buttons.xaml",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Styles\\ApplicationThemes\\Default\\Buttons.xaml",
+              "RelativeDocumentMoniker": "iKiosk.UI\\Styles\\ApplicationThemes\\Default\\Buttons.xaml",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Styles\\ApplicationThemes\\Default\\Buttons.xaml",
+              "RelativeToolTip": "iKiosk.UI\\Styles\\ApplicationThemes\\Default\\Buttons.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-09T12:58:12.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KioskLogic.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.Logic\\KioskLogic.cs",
+              "RelativeDocumentMoniker": "iKiosk.Logic\\KioskLogic.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.Logic\\KioskLogic.cs",
+              "RelativeToolTip": "iKiosk.Logic\\KioskLogic.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:56:50.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonalDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\PersonalDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\ViewModels\\PersonalDetailsViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\PersonalDetailsViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\ViewModels\\PersonalDetailsViewModel.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAAAKIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T10:00:59.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonalDetailsView.xaml",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Views\\PersonalDetailsView.xaml",
+              "RelativeDocumentMoniker": "iKiosk.UI\\Views\\PersonalDetailsView.xaml",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Views\\PersonalDetailsView.xaml",
+              "RelativeToolTip": "iKiosk.UI\\Views\\PersonalDetailsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-09T12:05:00.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InsertCashViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\InsertCashViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\ViewModels\\InsertCashViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\InsertCashViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\ViewModels\\InsertCashViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAjwBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:42:53.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PaymentMethodViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\PaymentMethodViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\ViewModels\\PaymentMethodViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\PaymentMethodViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\ViewModels\\PaymentMethodViewModel.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAjwBkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:43:01.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServiceView.xaml",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Views\\ServiceView.xaml",
+              "RelativeDocumentMoniker": "iKiosk.UI\\Views\\ServiceView.xaml",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Views\\ServiceView.xaml",
+              "RelativeToolTip": "iKiosk.UI\\Views\\ServiceView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-09T12:53:45.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServiceOption.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Services\\Models\\ServiceOption.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\Services\\Models\\ServiceOption.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Services\\Models\\ServiceOption.cs",
+              "RelativeToolTip": "iKiosk.UI\\Services\\Models\\ServiceOption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T13:23:25.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ViewNavigation.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.Framework.Wpf\\ViewNavigation.cs",
+              "RelativeDocumentMoniker": "iKiosk.Framework.Wpf\\ViewNavigation.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.Framework.Wpf\\ViewNavigation.cs",
+              "RelativeToolTip": "iKiosk.Framework.Wpf\\ViewNavigation.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAwwJ8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T11:29:11.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KioskLayout.xaml",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\CustomControls\\KioskLayout.xaml",
+              "RelativeDocumentMoniker": "iKiosk.UI\\CustomControls\\KioskLayout.xaml",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\CustomControls\\KioskLayout.xaml",
+              "RelativeToolTip": "iKiosk.UI\\CustomControls\\KioskLayout.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-09T12:49:38.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LanguageViewModel.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\LanguageViewModel.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\ViewModels\\LanguageViewModel.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\ViewModels\\LanguageViewModel.cs",
+              "RelativeToolTip": "iKiosk.UI\\ViewModels\\LanguageViewModel.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAuwIEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:54:19.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Services\\Api\\ApiClient.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\Services\\Api\\ApiClient.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\Services\\Api\\ApiClient.cs",
+              "RelativeToolTip": "iKiosk.UI\\Services\\Api\\ApiClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T11:01:07.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ServiceOption.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.Logic.Model\\ServiceOption.cs",
+              "RelativeDocumentMoniker": "iKiosk.Logic.Model\\ServiceOption.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.Logic.Model\\ServiceOption.cs",
+              "RelativeToolTip": "iKiosk.Logic.Model\\ServiceOption.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T12:33:49.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IKioskLogic.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.Logic\\IKioskLogic.cs",
+              "RelativeDocumentMoniker": "iKiosk.Logic\\IKioskLogic.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.Logic\\IKioskLogic.cs",
+              "RelativeToolTip": "iKiosk.Logic\\IKioskLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T11:54:36.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.Startup\\Program.cs",
+              "RelativeDocumentMoniker": "iKiosk.Startup\\Program.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.Startup\\Program.cs",
+              "RelativeToolTip": "iKiosk.Startup\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowBoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T11:13:31.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "KioskController.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.API\\Controllers\\KioskController.cs",
+              "RelativeDocumentMoniker": "iKiosk.API\\Controllers\\KioskController.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.API\\Controllers\\KioskController.cs",
+              "RelativeToolTip": "iKiosk.API\\Controllers\\KioskController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAWwCEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:59:49.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.UI\\App.xaml.cs",
+              "RelativeDocumentMoniker": "iKiosk.UI\\App.xaml.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.UI\\App.xaml.cs",
+              "RelativeToolTip": "iKiosk.UI\\App.xaml.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAADwAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T11:18:27.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\_Demo\\iKiosk\\iKiosk.API\\Program.cs",
+              "RelativeDocumentMoniker": "iKiosk.API\\Program.cs",
+              "ToolTip": "C:\\_Demo\\iKiosk\\iKiosk.API\\Program.cs",
+              "RelativeToolTip": "iKiosk.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-09T09:57:38.886Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
