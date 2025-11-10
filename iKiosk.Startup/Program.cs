@@ -6,7 +6,9 @@ using iKiosk.UI.Services.Api;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
 using System;
+using System.IO;
 
 namespace iKiosk.Startup
 {
@@ -22,13 +24,18 @@ namespace iKiosk.Startup
 
 			// Pass host instance to App (this line now works)
 			app.Host = host;
-			
-			//app.InitializeComponent();
+
 			app.Run();
 		}
 
 		public static IHostBuilder CreateHostBuilder(string[] args) =>
 			Host.CreateDefaultBuilder(args)
+				.ConfigureAppConfiguration((context, config) =>
+				{
+					// 🔹 Add appsettings.json manually (ensures WPF project reads it)
+					config.SetBasePath(Directory.GetCurrentDirectory());
+					config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+				})
 				.ConfigureLogging(logging =>
 				{
 					logging.ClearProviders();
@@ -36,10 +43,13 @@ namespace iKiosk.Startup
 				})
 				.ConfigureServices((context, services) =>
 				{
+					// 🔹 Get Base URL from appsettings.json
+					var baseUrl = context.Configuration["ApiSettings:BaseUrl"];
+
 					// API Client
 					services.AddHttpClient<IApiClient, ApiClient>(client =>
 					{
-						client.BaseAddress = new Uri("https://localhost:7015");
+						client.BaseAddress = new Uri(baseUrl);
 						client.Timeout = TimeSpan.FromSeconds(15);
 					});
 
@@ -56,3 +66,4 @@ namespace iKiosk.Startup
 				});
 	}
 }
+

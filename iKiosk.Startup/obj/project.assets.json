@@ -1815,6 +1815,9 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Microsoft.Extensions.Configuration.Abstractions >= 9.0.10",
+      "Microsoft.Extensions.Configuration.FileExtensions >= 9.0.10",
+      "Microsoft.Extensions.Configuration.Json >= 9.0.10",
+      "Microsoft.Extensions.DependencyInjection >= 9.0.10",
       "Microsoft.Extensions.Hosting >= 9.0.10",
       "Microsoft.Extensions.Hosting.Abstractions >= 9.0.10",
       "Microsoft.Extensions.Http >= 8.0.1",
@@ -1878,6 +1881,18 @@
         "targetAlias": "net8.0-windows",
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": {
+            "target": "Package",
+            "version": "[9.0.10, )"
+          },
+          "Microsoft.Extensions.Configuration.FileExtensions": {
+            "target": "Package",
+            "version": "[9.0.10, )"
+          },
+          "Microsoft.Extensions.Configuration.Json": {
+            "target": "Package",
+            "version": "[9.0.10, )"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[9.0.10, )"
           },

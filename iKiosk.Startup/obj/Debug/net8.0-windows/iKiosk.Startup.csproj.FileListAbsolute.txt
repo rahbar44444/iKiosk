@@ -58,3 +58,4 @@ C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\refint\iKiosk.Startup.dl
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.pdb
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\iKiosk.Startup.genruntimeconfig.cache
 C:\_Demo\iKiosk\iKiosk.Startup\obj\Debug\net8.0-windows\ref\iKiosk.Startup.dll
+C:\_Demo\iKiosk\iKiosk.Startup\bin\Debug\net8.0-windows\appsettings.json

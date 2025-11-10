@@ -315,10 +315,11 @@
                             <Setter TargetName="border" Property="Background" Value="{DynamicResource HoverBackgroundBrush}"/>
                             <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource PrimaryOrangeBrush}"/>
                             <Setter TargetName="border" Property="BorderThickness" Value="2"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}"/>
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{DynamicResource PrimaryOrangeBrush}"/>
-                            <Setter Property="Foreground" Value="White"/>
+                            <Setter TargetName="border" Property="Background" Value="{DynamicResource IconButtonHoverBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
