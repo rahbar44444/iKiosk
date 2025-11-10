@@ -62,9 +62,9 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="border"
                                 Property="Background"
-                                Value="{StaticResource PrimaryOrangeBrush}"/>
+                                Value="{StaticResource IconButtonHoverBackground}"/>
                             <Setter Property="Foreground"
-                                Value="{StaticResource PrimaryWhiteBrush}"/>
+                                Value="{StaticResource PrimaryOrangeBrush}"/>
                         </Trigger>
 
                         <!-- Disabled -->
@@ -133,9 +133,9 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="border"
                                     Property="Background"
-                                    Value="{StaticResource PrimaryOrangeBrush}"/>
+                                    Value="{StaticResource IconButtonHoverBackground}"/>
                             <Setter Property="Foreground"
-                                    Value="{StaticResource PrimaryWhiteBrush}"/>
+                                    Value="{StaticResource PrimaryOrangeBrush}"/>
                         </Trigger>
 
                         <!-- Disabled -->
@@ -204,9 +204,9 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="border"
                                 Property="Background"
-                                Value="{StaticResource PrimaryOrangeBrush}"/>
+                                Value="{StaticResource IconButtonHoverBackground}"/>
                             <Setter Property="Foreground"
-                                Value="{StaticResource PrimaryWhiteBrush}"/>
+                                Value="{StaticResource PrimaryOrangeBrush}"/>
                         </Trigger>
 
                         <!-- Disabled -->
@@ -275,9 +275,9 @@
                         <Trigger Property="IsPressed" Value="True">
                             <Setter TargetName="border"
                                 Property="Background"
-                                Value="{StaticResource PrimaryOrangeBrush}"/>
+                                Value="{StaticResource IconButtonHoverBackground}"/>
                             <Setter Property="Foreground"
-                                Value="{StaticResource PrimaryWhiteBrush}"/>
+                                Value="{StaticResource PrimaryOrangeBrush}"/>
                         </Trigger>
 
                         <!-- Disabled -->

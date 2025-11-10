@@ -28,6 +28,7 @@ Kung na-update mo na ang iyong National ID/Iqama sa Absher platform, mangyaring 
     <sys:String x:Key="MainContent_TotalAmount">Kabuuang halaga</sys:String>
     <sys:String x:Key="MainContent_InsertedAmount">Ipinasok na halaga</sys:String>
     <sys:String x:Key="MainContent_RemainingAmount">Natitirang halaga</sys:String>
+    <sys:String x:Key="MainContent_RemittanceCalculator">Kalkulador ng Padala</sys:String>
     <sys:String x:Key="Footer_MainMenu" xml:space="preserve">Pangunahing&#x0a;Menu</sys:String>
     <sys:String x:Key="Footer_Back">Bumalik</sys:String>
     <sys:String x:Key="Footer_Next">Susunod</sys:String>

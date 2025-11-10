@@ -28,6 +28,7 @@
     <sys:String x:Key="MainContent_TotalAmount">ആകെ തുക</sys:String>
     <sys:String x:Key="MainContent_InsertedAmount">നിക്ഷേപിച്ച തുക</sys:String>
     <sys:String x:Key="MainContent_RemainingAmount">ബാക്കി തുക</sys:String>
+    <sys:String x:Key="MainContent_RemittanceCalculator">റിമിറ്റൻസ് കാൽക്കുലേറ്റർ</sys:String>
     <sys:String x:Key="Footer_MainMenu" xml:space="preserve">പ്രധാന&#x0a;മെനു</sys:String>
     <sys:String x:Key="Footer_Back">മടങ്ങുക</sys:String>
     <sys:String x:Key="Footer_Next">അടുത്തത്</sys:String>

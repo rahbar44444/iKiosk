@@ -28,6 +28,7 @@ Si actualizó su identificación nacional/Iqama en la plataforma Absher, por fav
     <sys:String x:Key="MainContent_TotalAmount">Monto total</sys:String>
     <sys:String x:Key="MainContent_InsertedAmount">Monto insertado</sys:String>
     <sys:String x:Key="MainContent_RemainingAmount">Monto restante</sys:String>
+    <sys:String x:Key="MainContent_RemittanceCalculator">Calculadora de remesas</sys:String>
     <sys:String x:Key="Footer_MainMenu" xml:space="preserve">Menú&#x0a;principal</sys:String>
     <sys:String x:Key="Footer_Back">Atrás</sys:String>
     <sys:String x:Key="Footer_Next">Siguiente</sys:String>

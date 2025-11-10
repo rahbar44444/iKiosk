@@ -28,6 +28,7 @@
     <sys:String x:Key="MainContent_TotalAmount">कुल राशि</sys:String>
     <sys:String x:Key="MainContent_InsertedAmount">डाली गई राशि</sys:String>
     <sys:String x:Key="MainContent_RemainingAmount">शेष राशि</sys:String>
+    <sys:String x:Key="MainContent_RemittanceCalculator">रेमिटेंस कैलकुलेटर</sys:String>
     <sys:String x:Key="Footer_MainMenu" xml:space="preserve">मुख्य&#x0a;मेनू</sys:String>
     <sys:String x:Key="Footer_Back">वापस</sys:String>
     <sys:String x:Key="Footer_Next">आगे</sys:String>

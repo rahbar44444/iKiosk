@@ -89,7 +89,7 @@
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left">
 
-                    <Button Content="Remittance Calculator"
+                    <Button Content="{DynamicResource MainContent_RemittanceCalculator}"
                             Style="{StaticResource DefaultButtonStyle}"
                             FontSize="20"
                             FontWeight="Normal"

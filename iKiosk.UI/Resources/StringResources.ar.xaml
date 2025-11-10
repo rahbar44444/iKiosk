@@ -27,6 +27,7 @@
     <sys:String x:Key="MainContent_TotalAmount">المبلغ الإجمالي</sys:String>
     <sys:String x:Key="MainContent_InsertedAmount">المبلغ المدخل</sys:String>
     <sys:String x:Key="MainContent_RemainingAmount">المبلغ المتبقي</sys:String>
+    <sys:String x:Key="MainContent_RemittanceCalculator">حاسبة التحويل</sys:String>
     <sys:String x:Key="Footer_MainMenu" xml:space="preserve">القائمة&#x0a;الرئيسية</sys:String>
     <sys:String x:Key="Footer_Back">رجوع</sys:String>
     <sys:String x:Key="Footer_Next">التالي</sys:String>

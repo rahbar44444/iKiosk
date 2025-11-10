@@ -27,6 +27,7 @@ If you updated your national ID/Iqama in Absher platform, please visit the neare
     <sys:String x:Key="MainContent_TotalAmount">Total amount</sys:String>
     <sys:String x:Key="MainContent_InsertedAmount">Inserted amount</sys:String>
     <sys:String x:Key="MainContent_RemainingAmount">Remaining amount</sys:String>
+    <sys:String x:Key="MainContent_RemittanceCalculator">Remittance Calculator</sys:String>
     <sys:String x:Key="Footer_MainMenu" xml:space="preserve">Main&#x0A;Menu</sys:String>
     <sys:String x:Key="Footer_Back">Back</sys:String>
     <sys:String x:Key="Footer_Next">Next</sys:String>
