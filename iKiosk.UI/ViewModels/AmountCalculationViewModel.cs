@@ -162,30 +162,48 @@ namespace iKiosk.UI.ViewModels
 
 		private async void CalculateTotals()
 		{
-			var response = await _apiClient.CalculateRemittanceAsync(new RemittanceCalculationRequest
+			await RunCommand(() => ProgressVisibility, async () =>
 			{
-				ExchangeRate = ExchangeRate,
-				Fee = Fee,
-				VatRate = ValueAddedTax,
-				AmountToSend = AmountToPay
-			}); 
-			ValueAddedTax = response.Data.ValueAddedTax;
-			AmountToPay = response.Data.AmountToPay;
+				await Task.Delay(300);
+				var response = await _apiClient.CalculateRemittanceAsync(new RemittanceCalculationRequest
+				{
+					ExchangeRate = ExchangeRate,
+					Fee = Fee,
+					VatRate = ValueAddedTax,
+					AmountToSend = AmountToPay
+				});
+				ValueAddedTax = response.Data.ValueAddedTax;
+				AmountToPay = response.Data.AmountToPay;
+			});
+
+				
 		}
 
-		private void NavigateMainMenu(object obj)
+		private async void NavigateMainMenu(object obj)
 		{
-			_navigation.NavigateTo<HomeViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<HomeViewModel>();
+			});
 		}
 
-		private void NavigateNext(object obj)
+		private async void NavigateNext(object obj)
 		{
-			_navigation.NavigateTo<PaymentMethodViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<PaymentMethodViewModel>();
+			});
 		}
 
-		private void NavigateBack(object obj)
+		private async void NavigateBack(object obj)
 		{
-			_navigation.NavigateBack();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateBack();
+			});
 		}
 
 		private bool CanNavigateNext(object obj)

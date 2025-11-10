@@ -3,21 +3,8 @@ using iKiosk.Framework.Wpf.Interface;
 using iKiosk.Framework.Wpf.ViewModel;
 using iKiosk.UI.Services.Api;
 using iKiosk.UI.Services.Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.DirectoryServices.ActiveDirectory;
 using System.Globalization;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace iKiosk.UI.ViewModels
 {
@@ -159,27 +146,39 @@ namespace iKiosk.UI.ViewModels
 
 		private async void NavigateNext(object obj)
 		{
-			DateTime dateOfBirth;
-
-			DateTime.TryParseExact(
-				DateOfBirth,
-				"dd/MM/yyyy",
-				CultureInfo.InvariantCulture,
-				DateTimeStyles.None,
-				out dateOfBirth);
-			_response = await _apiClient.VerifyPersonalDetailsAsync(new PersonalDetailRequest { SaudiId= SaudiIqamaId.GetValueOrDefault(), DateOfBirth= dateOfBirth });
-
-			if (_response is null)
-				return;
-
-			if (!_response.Data.IsValid)
+			await RunCommand(() => ProgressVisibility, async () =>
 			{
-				_navigation.NavigateTo<ExpiredViewModel>(_response.Data);
-			}
-			else
-			{
-				_navigation.NavigateTo<ServiceViewModel>(_response.Data);
-			}
+				if (!DateTime.TryParseExact(
+						DateOfBirth,
+						"dd/MM/yyyy",
+						CultureInfo.InvariantCulture,
+						DateTimeStyles.None,
+						out DateTime dateOfBirth))
+				{
+					return;
+				}
+
+				await Task.Delay(2000);
+
+				var response = await _apiClient.VerifyPersonalDetailsAsync(
+					new PersonalDetailRequest
+					{
+						SaudiId = SaudiIqamaId.GetValueOrDefault(),
+						DateOfBirth = dateOfBirth
+					});
+
+				if (response?.Data is null)
+					return;
+
+				if (!response.Data.IsValid)
+				{
+					_navigation.NavigateTo<ExpiredViewModel>(response.Data);
+				}
+				else
+				{
+					_navigation.NavigateTo<ServiceViewModel>(response.Data);
+				}
+			});
 		}
 
 		private void NavigateBack(object obj)

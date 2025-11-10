@@ -122,17 +122,29 @@ namespace iKiosk.UI.ViewModels
 
 		#region Private Methods	
 
-		private void NavigateMainMenu(object obj)
+		private async void NavigateMainMenu(object obj)
 		{
-			_navigation.NavigateTo<HomeViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<HomeViewModel>();
+			});
 		}
-		private void NavigateNext(object obj)
+		private async void NavigateNext(object obj)
 		{
-			_navigation.NavigateTo<InsertCashViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<InsertCashViewModel>();
+			});
 		}
-		private void NavigateBack(object obj)
+		private async void NavigateBack(object obj)
 		{
-			_navigation.NavigateBack();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateBack();
+			});
 		}
 
 		private void PayByCash(object obj)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iKiosk.Framework.Wpf.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -79,5 +80,47 @@ namespace iKiosk.Framework.Wpf
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 		}
+
+		private bool _progressVisibility;
+		public bool ProgressVisibility
+		{
+			get => _progressVisibility;
+			set
+			{
+				_progressVisibility = value;
+				OnPropertyChanged();
+			}
+		}
+
+		#region Command Helpers
+
+		/// <summary>
+		/// Run a command if the updating flag is not set.
+		/// If the flag is true(indicating the function is already running) then the action is not run.
+		/// If the flag is false(indicating no running function) then the action is run.
+		/// Once the action is finished if it was run, then the flag is reset to false once done.
+		/// </summary>
+		/// <param name="updatingFlag">The boolean property flag indicating if the command is already running</param>
+		/// <param name="action">The action to run if command is not already running</param>
+		/// <returns></returns>
+		protected async Task RunCommand(Expression<Func<bool>> updatingFlag, Func<Task> action)
+		{
+			if (updatingFlag.GetPropertyValue())
+				return;
+
+			updatingFlag.SetPropertyValue(true);
+
+			try
+			{
+				await action();
+			}
+			finally
+			{
+				updatingFlag.SetPropertyValue(false);
+			}
+		}
+
+
+		#endregion Command Helpers
 	}
 }

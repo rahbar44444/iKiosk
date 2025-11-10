@@ -114,36 +114,52 @@ namespace iKiosk.UI.ViewModels
 		/// <summary>
 		/// Calculate Remaining
 		/// </summary>
-		private void CalculateRemaining()
+		private async void CalculateRemaining()
 		{
-			RemainingAmount = Math.Max(0, TotalAmount - InsertedAmount);
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				RemainingAmount = Math.Max(0, TotalAmount - InsertedAmount);
+			});
 		}
 
 		/// <summary>
 		/// Navigate to Main Menu
 		/// </summary>
 		/// <param name="obj"></param>
-		private void NavigateMainMenu(object obj)
+		private async void NavigateMainMenu(object obj)
 		{
-			_navigation.NavigateTo<HomeViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<HomeViewModel>();
+			});
 		}		
 
 		/// <summary>
 		/// Navigate to Result Screen
 		/// </summary>
 		/// <param name="obj"></param>
-		private void NavigateNext(object obj)
+		private async void NavigateNext(object obj)
 		{
-			_navigation.NavigateTo<AmountCalculationViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<AmountCalculationViewModel>();
+			});
 		}
 
 		/// <summary>
 		/// Navigate back to Payment Method screen
 		/// </summary>
 		/// <param name="obj"></param>
-		private void NavigateBack(object obj)
+		private async void NavigateBack(object obj)
 		{
-			_navigation.NavigateBack();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateBack();
+			});
 		}
 
 		private bool CanNavigateMainMenu(object obj)

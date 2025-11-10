@@ -119,54 +119,65 @@ namespace iKiosk.UI.ViewModels
 
 		private async Task LoadLanguages()
 		{
-			var result = await _apiClient.GetLanguagesAsync();
-
-			if (!result.HasError && result.Data != null)
+			await RunCommand(() => ProgressVisibility, async () =>
 			{
-				await Application.Current.Dispatcher.InvokeAsync(() =>
-				{
-					Languages = result.Data.ToObservableCollection();
-				});
-			}
+				await Task.Delay(300);
+				var result = await _apiClient.GetLanguagesAsync();
 
+				if (!result.HasError && result.Data != null)
+				{
+					await Application.Current.Dispatcher.InvokeAsync(() =>
+					{
+						Languages = result.Data.ToObservableCollection();
+					});
+				}
+			});
 		}
 
-		private void OnLanguageSelected(LanguageOption selectedLanguage)
+		private async void OnLanguageSelected(LanguageOption selectedLanguage)
 		{
-			if (selectedLanguage == null)
-				return;
-
-			try
+			await RunCommand(() => ProgressVisibility, async () =>
 			{
-				var cultureCode = selectedLanguage.Name switch
+				await Task.Delay(300);
+				if (selectedLanguage == null)
+					return;
+
+				try
 				{
-					"العربية" => "ar",
-					"English" => "en",
-					"اردو" => "ur",
-					"हिंदी" => "hi",
-					"മലയാളം" => "ml",
-					"Filipino" => "fil",
-					"French" => "fr",
-					"Spanish" => "es",
-					_ => "en"
-				};
+					var cultureCode = selectedLanguage.Name switch
+					{
+						"العربية" => "ar",
+						"English" => "en",
+						"اردو" => "ur",
+						"हिंदी" => "hi",
+						"മലയാളം" => "ml",
+						"Filipino" => "fil",
+						"French" => "fr",
+						"Spanish" => "es",
+						_ => "en"
+					};
 
-				// Change Language
-				LocalizationManager.ChangeLanguage(cultureCode);
+					// Change Language
+					LocalizationManager.ChangeLanguage(cultureCode);
 
-				// Navigation to Personal Details
-				_navigation.NavigateTo<PersonalDetailsViewModel>();
+					// Navigation to Personal Details
+					_navigation.NavigateTo<PersonalDetailsViewModel>();
 
-			}
-			catch (Exception ex)
-			{
-				
-			}
+				}
+				catch (Exception ex)
+				{
+
+				}
+			});
 		}
 
-		private void NavigateMainMenu(object obj)
+		private async void NavigateMainMenu(object obj)
 		{
-			_navigation.NavigateBack();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateBack();
+			});
 		}
 
 		private bool CanNavigateMainMenu(object obj)

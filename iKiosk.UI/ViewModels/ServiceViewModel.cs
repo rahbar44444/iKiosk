@@ -159,9 +159,13 @@ namespace iKiosk.UI.ViewModels
 			IsNextEnabled = true;
 		}
 
-		private void NavigateMainMenu(object obj)
+		private async void NavigateMainMenu(object obj)
 		{
-			_navigation.NavigateTo<HomeViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<HomeViewModel>();
+			});
 		}
 
 		private bool CanNavigateMainMenu(object obj)
@@ -170,10 +174,14 @@ namespace iKiosk.UI.ViewModels
 
 		}
 
-		private void NavigateNext(object obj)
+		private async void NavigateNext(object obj)
 		{
-			SelectedService = Services.FirstOrDefault(s => s.IsSelected);
-			_navigation.NavigateTo<AmountCalculationViewModel>(SelectedService);
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(200);
+				SelectedService = Services.FirstOrDefault(s => s.IsSelected);
+				_navigation.NavigateTo<AmountCalculationViewModel>(SelectedService);
+			});
 		}
 
 		private bool CanNavigateNext(object obj)
@@ -182,9 +190,13 @@ namespace iKiosk.UI.ViewModels
 
 		}
 
-		private void NavigateBack(object obj)
+		private async void NavigateBack(object obj)
 		{
-			_navigation.NavigateBack();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateBack();
+			});
 		}
 
 		private bool CanNavigateBack(object obj)

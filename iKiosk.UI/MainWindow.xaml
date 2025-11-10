@@ -44,9 +44,26 @@
             <Grid.Effect>
                 <BlurEffect Radius="5"/>
             </Grid.Effect>-->
-        <controls:BusyIndicator IsBusy="{Binding ProgressVisibility, Converter={StaticResource BoolToVisibilityConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+        
+        <!--<controls:BusyIndicator IsBusy="{Binding DataContext.ActiveViewBase.ProgressVisibility, 
+                     RelativeSource={RelativeSource AncestorType=Window}}"
+                                Panel.ZIndex="99999"
+                                HorizontalAlignment="Center" VerticalAlignment="Center">
             
-        </controls:BusyIndicator>
+        </controls:BusyIndicator>-->
+        <Grid Visibility="{Binding DataContext.ActiveViewBase.ProgressVisibility, 
+                               RelativeSource={RelativeSource AncestorType=Window}, 
+                               Converter={StaticResource BoolToVisibilityConverter}}"
+          Background="#80000000"  
+            Panel.ZIndex="99999">
+            <controls:BusyIndicator 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            IsBusy="{Binding DataContext.ActiveViewBase.ProgressVisibility, 
+                             RelativeSource={RelativeSource AncestorType=Window}}"/>
+        </Grid>
+
         <ContentControl x:Name="cpHost" Width="{Binding Source={x:Static SystemParameters.PrimaryScreenWidth}}" Content="{Binding ActiveViewBase}" Margin="0,0,0,0"/>
         <!--</Grid>-->
     </Grid>
