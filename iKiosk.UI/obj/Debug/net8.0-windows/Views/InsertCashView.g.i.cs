@@ -55,7 +55,7 @@ namespace iKiosk.UI.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/iKiosk.UI;component/views/insertcashview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/iKiosk.UI;V1.0.0.0;component/views/insertcashview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\InsertCashView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -53,7 +53,7 @@ namespace iKiosk.UI.CustomControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/iKiosk.UI;component/customcontrols/numberkeypadcontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/iKiosk.UI;V1.0.0.0;component/customcontrols/numberkeypadcontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\CustomControls\NumberKeypadControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
