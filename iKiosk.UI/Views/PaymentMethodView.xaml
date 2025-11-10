@@ -32,10 +32,6 @@
         <!-- ✅ Main Content -->
         <controls:KioskLayout.MainContent>
             <Grid Margin="50">
-                <Grid.Background>
-                    <ImageBrush ImageSource="/iKiosk.UI;component/Images/background.jpg"
-                                Stretch="UniformToFill"/>
-                </Grid.Background>
 
                 <!-- White card -->
                 <Border Background="{StaticResource PrimaryWhiteBrush}"

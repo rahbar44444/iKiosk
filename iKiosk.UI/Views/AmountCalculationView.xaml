@@ -35,7 +35,7 @@
 
         <!-- Main content -->
         <controls:KioskLayout.MainContent>
-            <Grid Margin="50 30 50 50">
+            <Grid Margin="50 50 50 50">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -104,7 +104,7 @@
                              Style="{StaticResource DefaultTextBoxStyle}" Margin="0,25,0,10"/>
                     <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Fee, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                              Style="{StaticResource DefaultTextBoxStyle}" Margin="0,5,0,10"/>
-                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ValueAddedTax}"
+                    <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ValueAddedTax, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                              Style="{StaticResource DefaultTextBoxStyle}" Margin="0,0,0,10"/>
                     <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding AmountToPay, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                              Style="{StaticResource DefaultTextBoxStyle}" Margin="0,0,0,10"/>
@@ -113,12 +113,12 @@
 
 
                 <!-- 🔹 Number Keypad -->
-                <controls:NumberKeypadControl Grid.Column="2"
-                                      Width="350"
-                                      Height="300"
+                <controls:NumberKeypadControl Grid.Column="1" Grid.ColumnSpan="2"
+                                      Width="300"
+                                      Height="250"
                                       HorizontalAlignment="Stretch"
                                       VerticalAlignment="Center"
-                                      Margin="0,0,0,0"/>
+                                      Margin="150,0,0,0"/>
             </Grid>
         </controls:KioskLayout.MainContent>      
 

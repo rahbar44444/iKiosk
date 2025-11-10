@@ -58,6 +58,13 @@
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="225" />
         <Setter Property="behavior:TextBoxCurrencyBehavior.CurrencySuffix" Value="SAR"/>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <AdornedElementPlaceholder/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="TextBox">

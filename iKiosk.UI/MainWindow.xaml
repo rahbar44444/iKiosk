@@ -7,8 +7,10 @@
         xmlns:controls="clr-namespace:iKiosk.UI.CustomControls"
         xmlns:viewModels="clr-namespace:iKiosk.UI.ViewModels"
         xmlns:views="clr-namespace:iKiosk.UI.Views"
+        xmlns:helpers="clr-namespace:iKiosk.Framework.Wpf.Helpers;assembly=iKiosk.Framework.Wpf"
         mc:Ignorable="d"
         WindowState="Maximized"
+        helpers:ResolutionHelper.EnableAutoScale="True"
         WindowStyle="None"
         x:Name="mainWindow"
         Title="iKIOSK" Height="450" Width="800">

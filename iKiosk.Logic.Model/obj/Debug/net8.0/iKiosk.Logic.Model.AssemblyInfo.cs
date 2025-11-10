@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iKiosk.Logic.Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77c6a5ec98189290de8081041068ed5c8fd6d78c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a1b089979d9bb0e36e5571499798387414b4756")]
 [assembly: System.Reflection.AssemblyProductAttribute("iKiosk.Logic.Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iKiosk.Logic.Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

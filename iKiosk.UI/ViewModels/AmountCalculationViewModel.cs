@@ -31,7 +31,7 @@ namespace iKiosk.UI.ViewModels
 
 		private decimal _ExchangeRate = 100m; // 1 INR = 0.045 SAR
 		private decimal _Fee = 25m;
-		private decimal _ValueAddedTax;
+		private decimal _ValueAddedTax = 0.15m;
 		private decimal _AmountToPay;
 
 		private bool _IsMainMenuVisible = true;
@@ -47,6 +47,7 @@ namespace iKiosk.UI.ViewModels
 			get { return _ExchangeRate; }
 			set
 			{
+				if (_ExchangeRate == value) return;
 				_ExchangeRate = value;
 				OnPropertyChanged(nameof(ExchangeRate));
 				CalculateTotals();
@@ -58,6 +59,7 @@ namespace iKiosk.UI.ViewModels
 			get { return _Fee; }
 			set
 			{
+				if (_Fee == value) return;
 				_Fee = value;
 				OnPropertyChanged(nameof(Fee));
 				CalculateTotals();
@@ -71,7 +73,6 @@ namespace iKiosk.UI.ViewModels
 			{
 				_ValueAddedTax = value;
 				OnPropertyChanged(nameof(ValueAddedTax));
-				CalculateTotals();
 			}
 		}
 
@@ -172,7 +173,7 @@ namespace iKiosk.UI.ViewModels
 					VatRate = ValueAddedTax,
 					AmountToSend = AmountToPay
 				});
-				ValueAddedTax = response.Data.ValueAddedTax;
+				//ValueAddedTax = response.Data.ValueAddedTax;
 				AmountToPay = response.Data.AmountToPay;
 			});
 
