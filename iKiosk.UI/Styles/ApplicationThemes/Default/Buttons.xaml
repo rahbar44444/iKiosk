@@ -16,7 +16,7 @@
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlackBrush}"/>
         <Setter Property="BorderThickness" Value="4"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}"/>
-        <Setter Property="FontWeight" Value="{StaticResource BoldFontWeight}"/>
+        <Setter Property="FontWeight" Value="{StaticResource NormalFontWeight}"/>
         <Setter Property="FontSize" Value="{StaticResource HeadingFontSize}"/>
         <Setter Property="Padding" Value="10,5"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -136,6 +136,77 @@
                                     Value="{StaticResource PrimaryOrangeBrush}"/>
                             <Setter Property="Foreground"
                                     Value="{StaticResource PrimaryWhiteBrush}"/>
+                        </Trigger>
+
+                        <!-- Disabled -->
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="controls:IconButton" x:Key="NextIconButtonStyle">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Foreground" Value="{StaticResource PrimaryBlackBrush}"/>
+        <Setter Property="Background" Value="{StaticResource PrimaryWhiteBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlackBrush}"/>
+        <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="TextBlock.Foreground"
+            Value="{Binding Foreground, RelativeSource={RelativeSource Self}}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="controls:IconButton">
+                    <Border x:Name="border"
+                        CornerRadius="30"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        Background="{TemplateBinding Background}"
+                        Padding="10">
+                        <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Margin="10,0">
+                            <TextBlock Text="{TemplateBinding Text}"
+                                   FontFamily="{StaticResource PrimaryFontFamily}"
+                                   FontSize="20"
+                                   FontWeight="DemiBold"
+                                   VerticalAlignment="Center"
+                                   Foreground="{TemplateBinding Foreground}"/>
+                            <Image Source="{TemplateBinding IconSource}"
+                               Width="60" Height="60" Margin="0,0,10,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Hover -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border"
+                                Property="Background"
+                                Value="{StaticResource IconButtonHoverBackground}"/>
+                            <Setter TargetName="border"
+                                Property="BorderBrush"
+                                Value="{StaticResource PrimaryOrangeBrush}"/>
+                            <Setter Property="Foreground"
+                                Value="{StaticResource PrimaryOrangeBrush}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Foreground"
+        Value="{StaticResource PrimaryBlackBrush}"/>
+                        </Trigger>
+
+                        <!-- Pressed -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border"
+                                Property="Background"
+                                Value="{StaticResource PrimaryOrangeBrush}"/>
+                            <Setter Property="Foreground"
+                                Value="{StaticResource PrimaryWhiteBrush}"/>
                         </Trigger>
 
                         <!-- Disabled -->

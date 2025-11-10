@@ -20,15 +20,14 @@
                             HorizontalAlignment="Center"
                     Margin="30,10">
                 <Image Source="/iKiosk.UI;component/Images/personal_detail.png"
-                   Width="40"
-                   Height="40"
+                    Width="60"
+                    Height="60"
                    Margin="0,0,10,0"/>
                 <TextBlock Text="{DynamicResource MainContent_AmountToSend}"
                        VerticalAlignment="Center"
                        FontFamily="Century Gothic"
-                       FontSize="28"
-                       FontWeight="SemiBold"
-                       Foreground="{DynamicResource PrimaryOrangeBrush}"/>
+                       FontSize="32"
+                       Foreground="{DynamicResource PrimaryBlackBrush}"/>
                 </StackPanel>
            
         </controls:KioskLayout.HeaderContent>
@@ -36,7 +35,7 @@
 
         <!-- Main content -->
         <controls:KioskLayout.MainContent>
-            <Grid Margin="50">
+            <Grid Margin="50 30 50 50">
                 <Grid.Background>
                     <ImageBrush ImageSource="/iKiosk.UI;component/Images/background.jpg"
                         Stretch="UniformToFill"/>

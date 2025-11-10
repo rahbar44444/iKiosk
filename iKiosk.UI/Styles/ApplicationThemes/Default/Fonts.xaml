@@ -14,6 +14,7 @@
                 xmlns:sys="clr-namespace:System;assembly=mscorlib">16</sys:Double>
 
     <!-- Font weights -->
+    <FontWeight x:Key="NormalFontWeight">Normal</FontWeight>
     <FontWeight x:Key="BoldFontWeight">Bold</FontWeight>
     <FontWeight x:Key="SemiBoldFontWeight">SemiBold</FontWeight>
 

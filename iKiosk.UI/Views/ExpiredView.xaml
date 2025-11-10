@@ -33,7 +33,7 @@
                         Margin="0,20,0,0"
                         Width="800">
 
-                <!-- 🟠 Main Message -->
+                <!-- Title -->
                 <TextBlock TextWrapping="Wrap"
                            TextAlignment="Center"
                            Foreground="Black"
@@ -44,7 +44,6 @@
                            Margin="0,0,0,40">
                 </TextBlock>
 
-                <!-- 🟢 Button Row -->
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"

@@ -137,6 +137,23 @@ namespace iKiosk.UI.ViewModels
 
 		#endregion Constructor
 
+		#region Public Methods
+
+		public override void ViewModelLoaded(object message)
+		{
+			if (message != null)
+			{
+				var personalDetails = (PersonalDetailResponse)message;
+				if (personalDetails != null)
+				{
+					SaudiIqamaId = personalDetails.SaudiIqamaId;
+					DateOfBirth = personalDetails.DateOfBirth;
+				}
+			}
+		}
+
+		#endregion Public Methods
+
 		#region Private Methods
 
 		private void NavigateMainMenu(object obj)

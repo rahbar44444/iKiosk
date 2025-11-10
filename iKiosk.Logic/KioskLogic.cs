@@ -43,8 +43,10 @@ namespace iKiosk.Logic
 				case 1234567890:
 					return new PersonalDetailResponse
 					{
+						SaudiIqamaId = 1234567890,
 						IsValid = true,
 						FullName = "Mustafa Taj",
+						DateOfBirth = "10/07/1995",
 						StatusMessage = "Personal details verified successfully.",
 						CustomerId = "CUST-1234567890",
 						Nationality = "Saudi",
@@ -58,8 +60,10 @@ namespace iKiosk.Logic
 				case 1234567891:
 					return new PersonalDetailResponse
 					{
+						SaudiIqamaId = 1234567891,
 						IsValid = false,
 						FullName = "Rahbar Khan",
+						DateOfBirth = "10/07/1995",
 						StatusMessage = "Your national ID/Iqama is expired. Please visit the nearest branch.",
 						CustomerId = "CUST-9876543210",
 						Nationality = "Indian",

@@ -16,5 +16,5 @@ C:\_Demo\iKiosk\iKiosk.UI\App.xaml
 20896124793
 CustomControls\BusyIndicator.xaml;CustomControls\KioskLayout.xaml;CustomControls\NumberKeypadControl.xaml;MainWindow.xaml;Resources\StringResources.ar.xaml;Resources\StringResources.en.xaml;Resources\StringResources.es.xaml;Resources\StringResources.fil.xaml;Resources\StringResources.fr.xaml;Resources\StringResources.hi.xaml;Resources\StringResources.ml.xaml;Resources\StringResources.ur.xaml;Styles\ApplicationThemes\Default\Brushes.xaml;Styles\ApplicationThemes\Default\Buttons.xaml;Styles\ApplicationThemes\Default\Colors.xaml;Styles\ApplicationThemes\Default\Fonts.xaml;Styles\ApplicationThemes\Default\IconButtons.xaml;Styles\ApplicationThemes\Default\TextBlock.xaml;Styles\ApplicationThemes\Default\TextBoxStyle.xaml;Styles\ApplicationThemes\Default\Theme.xaml;Themes\Generic.xaml;Views\AmountCalculationView.xaml;Views\ExpiredView.xaml;Views\HomeView.xaml;Views\InsertCashView.xaml;Views\LanguageView.xaml;Views\PaymentMethodView.xaml;Views\PersonalDetailsView.xaml;Views\ServiceView.xaml;
 
-False
+True
 

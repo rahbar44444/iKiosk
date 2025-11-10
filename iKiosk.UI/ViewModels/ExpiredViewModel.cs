@@ -23,6 +23,8 @@ namespace iKiosk.UI.ViewModels
 		private readonly IApiClient _apiClient;
 		private readonly IViewNavigation _navigation;
 
+		PersonalDetailResponse _personalDetails;
+
 		private string _PersonName;
 
 		#endregion Private Fields
@@ -52,7 +54,6 @@ namespace iKiosk.UI.ViewModels
 
 		#region Commands
 
-		public ICommand StartCommand { get; set; }
 		public ICommand NavigateMainMenuCommand { get; }
 		public ICommand UpdateCommand { get; }
 
@@ -64,7 +65,6 @@ namespace iKiosk.UI.ViewModels
 		{
 			_apiClient = apiClient;
 			_navigation = navigation;
-			StartCommand = new Command(Start, CanStart);
 			NavigateMainMenuCommand = new Command(NavigateMainMenu, CanNavigateMainMenu);
 			UpdateCommand = new Command(Update, CanUpdate);
 		}
@@ -75,10 +75,10 @@ namespace iKiosk.UI.ViewModels
 
 		public override void ViewModelLoaded(object message)
 		{
-			var personalDetail = (PersonalDetailResponse)message;
-			if (personalDetail != null)
+			_personalDetails = (PersonalDetailResponse)message;
+			if (_personalDetails != null)
 			{
-				PersonName = personalDetail.FullName;
+				PersonName = _personalDetails.FullName;
 			}
 		}
 
@@ -86,27 +86,25 @@ namespace iKiosk.UI.ViewModels
 
 		#region Private Methods
 
-		private void Start(object obj)
+		private async void NavigateMainMenu(object obj)
 		{
-			_navigation.NavigateTo<LanguageViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<HomeViewModel>();
+			});
 		}
 
-		private void NavigateMainMenu(object obj)
+
+		private async void Update(object obj)
 		{
-			_navigation.NavigateTo<HomeViewModel>();
+			await RunCommand(() => ProgressVisibility, async () =>
+			{
+				await Task.Delay(300);
+				_navigation.NavigateTo<PersonalDetailsViewModel>(_personalDetails);
+			});
 		}
 
-
-		private void Update(object obj)
-		{
-			_navigation.NavigateTo<ServiceViewModel>();
-		}
-
-		private bool CanStart(object obj)
-		{
-			return true;
-
-		}
 		private bool CanNavigateMainMenu(object obj)
 		{
 			return true;

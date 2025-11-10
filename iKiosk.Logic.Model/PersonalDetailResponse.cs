@@ -8,8 +8,10 @@ namespace iKiosk.Logic.Model
 {
 	public class PersonalDetailResponse
 	{
+		public int SaudiIqamaId { get; set; }
 		public bool IsValid { get; set; }
 		public string FullName { get; set; } = string.Empty;
+		public string DateOfBirth { get; set; } = string.Empty;
 		public string StatusMessage { get; set; } = string.Empty;
 		public string CustomerId { get; set; } = string.Empty;
 		public string Nationality { get; set; } = string.Empty;

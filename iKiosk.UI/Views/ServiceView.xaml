@@ -20,15 +20,14 @@
                             HorizontalAlignment="Center"
                     Margin="30,10">
                 <Image Source="/iKiosk.UI;component/Images/personal_detail.png"
-                   Width="40"
-                   Height="40"
+                    Width="60"
+                    Height="60"
                    Margin="0,0,10,0"/>
                 <TextBlock Text="{DynamicResource MainContent_ChooseService}"
                        VerticalAlignment="Center"
                        FontFamily="Century Gothic"
-                       FontSize="28"
-                       FontWeight="SemiBold"
-                       Foreground="{DynamicResource PrimaryOrangeBrush}"/>
+                       FontSize="32"
+                       Foreground="{DynamicResource PrimaryBlackBrush}"/>
                 </StackPanel>
            
         </controls:KioskLayout.HeaderContent>
@@ -51,8 +50,7 @@
                         <!-- Title -->
                         <TextBlock Text="{DynamicResource MainContent_ChooseServiceTitle}"
                            FontFamily="{StaticResource PrimaryFontFamily}"
-                           FontSize="18"
-                           FontWeight="SemiBold"
+                           FontSize="22"
                            Foreground="{StaticResource PrimaryBlackBrush}"
                                    HorizontalAlignment="Left"
                                    VerticalAlignment="Bottom"

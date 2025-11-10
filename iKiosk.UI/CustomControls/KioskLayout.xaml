@@ -108,7 +108,7 @@
                                      Text="{DynamicResource Footer_Next}"
                                      IconSource="/iKiosk.UI;component/Images/next.png"
                                      Command="{Binding DataContext.NavigateNextCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"
-                                     Style="{DynamicResource IconButtonStyle}"
+                                     Style="{DynamicResource NextIconButtonStyle}"
                                      Visibility="{Binding IsNextVisible, Converter={StaticResource BoolToVisibilityConverter}}"
                                      IsEnabled="{Binding IsNextEnabled}"/>
             </StackPanel>

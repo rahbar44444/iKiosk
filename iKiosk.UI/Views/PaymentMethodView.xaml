@@ -10,22 +10,22 @@
     </fx:ViewControl.Resources>
 
     <controls:KioskLayout>
-        <!-- ✅ Header -->
+        <!-- Header -->
         <controls:KioskLayout.HeaderContent>
             <StackPanel Orientation="Horizontal"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         Margin="30,10">
                 <Image Source="/iKiosk.UI;component/Images/personal_detail.png"
-                       Width="40"
-                       Height="40"
+                        Width="60"
+                        Height="60"
                        Margin="0,0,10,0"/>
                 <TextBlock Text="{DynamicResource MainContent_AmountToSend}"
                            VerticalAlignment="Center"
                            FontFamily="{StaticResource PrimaryFontFamily}"
                            FontSize="28"
                            FontWeight="SemiBold"
-                           Foreground="{DynamicResource PrimaryOrangeBrush}"/>
+                           Foreground="{DynamicResource PrimaryBlackBrush}"/>
             </StackPanel>
         </controls:KioskLayout.HeaderContent>
 

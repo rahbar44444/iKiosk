@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iKiosk.Startup")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7638cc378c993d0fc7e979f3846a29c489f9befd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+345f4d3b484e05528da5310b2262f8f63737dd0e")]
 [assembly: System.Reflection.AssemblyProductAttribute("iKiosk.Startup")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iKiosk.Startup")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -145,7 +145,7 @@ namespace iKiosk.UI.ViewModels
 			await RunCommand(() => ProgressVisibility, async () =>
 			{
 				await Task.Delay(300);
-				_navigation.NavigateTo<AmountCalculationViewModel>();
+				_navigation.NavigateTo<HomeViewModel>();
 			});
 		}
 
