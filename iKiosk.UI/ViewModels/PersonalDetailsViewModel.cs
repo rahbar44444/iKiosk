@@ -200,7 +200,7 @@ namespace iKiosk.UI.ViewModels
 
 		private void NavigateBack(object obj)
 		{
-			_navigation.NavigateTo<HomeViewModel>();
+			_navigation.NavigateBack();
 		}
 		private void RemittanceCalculator(object obj)
 		{

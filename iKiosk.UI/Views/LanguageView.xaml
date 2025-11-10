@@ -54,7 +54,7 @@
                                 Height="80" 
                                 Width="205" 
                                 Margin="20" 
-                                Style="{DynamicResource DefaultButtonStyle}"
+                                Style="{DynamicResource BorderlessButtonStyle}"
                             Command="{Binding DataContext.SelectLanguageCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
                             CommandParameter="{Binding}">
                         </Button>

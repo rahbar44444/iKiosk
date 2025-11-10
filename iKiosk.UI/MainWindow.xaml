@@ -11,7 +11,7 @@
         mc:Ignorable="d"
         WindowState="Maximized"
         helpers:ResolutionHelper.EnableAutoScale="True"
-        WindowStyle="None"
+        WindowStyle="ThreeDBorderWindow"
         x:Name="mainWindow"
         Title="iKIOSK" Height="450" Width="800">
     <Window.Resources>

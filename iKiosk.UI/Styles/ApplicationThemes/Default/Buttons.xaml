@@ -77,13 +77,58 @@
         </Setter>
     </Style>
 
+    <Style x:Key="BorderlessButtonStyle"
+       TargetType="Button"
+       BasedOn="{StaticResource DefaultButtonStyle}">
+        <Setter Property="BorderThickness" Value="0"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border"
+                        CornerRadius="30"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                      RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderThickness" Value="3"/>
+                            <Setter TargetName="border" Property="CornerRadius" Value="30"/>
+                            <Setter Property="Background" Value="{StaticResource IconButtonHoverBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryOrangeBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Foreground"
+                                    Value="{StaticResource PrimaryBlackBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="BorderThickness" Value="3"/>
+                            <Setter TargetName="border" Property="CornerRadius" Value="30"/>
+                            <Setter Property="Background" Value="{StaticResource IconButtonHoverBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource PrimaryOrangeBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.6"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="controls:IconButton" x:Key="IconButtonStyle">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Foreground" Value="{StaticResource PrimaryBlackBrush}"/>
         <Setter Property="Background" Value="{StaticResource PrimaryWhiteBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlackBrush}"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}"/>
-        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="TextBlock.Foreground"
                 Value="{Binding Foreground, RelativeSource={RelativeSource Self}}"/>
 
@@ -96,6 +141,15 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             Background="{TemplateBinding Background}"
                             Padding="10">
+                        <Border.Effect>
+                            <DropShadowEffect
+                            Color="Black"
+                            Direction="270"
+                            ShadowDepth="4"
+                            Opacity="0.3"
+                            BlurRadius="8"/>
+                        </Border.Effect>
+
                         <StackPanel Orientation="Horizontal"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
@@ -105,7 +159,6 @@
                             <TextBlock Text="{TemplateBinding Text}"
                                        FontFamily="{StaticResource PrimaryFontFamily}"
                                        FontSize="20"
-                                       FontWeight="DemiBold"
                                        VerticalAlignment="Center"
                                        Foreground="{TemplateBinding Foreground}"/>
                         </StackPanel>
@@ -154,7 +207,7 @@
         <Setter Property="Background" Value="{StaticResource PrimaryWhiteBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource PrimaryBlackBrush}"/>
         <Setter Property="FontFamily" Value="{StaticResource PrimaryFontFamily}"/>
-        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="TextBlock.Foreground"
             Value="{Binding Foreground, RelativeSource={RelativeSource Self}}"/>
 
@@ -167,6 +220,15 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         Background="{TemplateBinding Background}"
                         Padding="10">
+                        <Border.Effect>
+                            <DropShadowEffect
+                            Color="Black"
+                            Direction="270"
+                            ShadowDepth="4"
+                            Opacity="0.3"
+                            BlurRadius="8"/>
+                        </Border.Effect>
+
                         <StackPanel Orientation="Horizontal"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
@@ -174,11 +236,10 @@
                             <TextBlock Text="{TemplateBinding Text}"
                                    FontFamily="{StaticResource PrimaryFontFamily}"
                                    FontSize="20"
-                                   FontWeight="DemiBold"
                                    VerticalAlignment="Center"
                                    Foreground="{TemplateBinding Foreground}"/>
                             <Image Source="{TemplateBinding IconSource}"
-                               Width="60" Height="60" Margin="0,0,10,0"/>
+                               Width="60" Height="60" Margin="10,0,10,0"/>
                         </StackPanel>
                     </Border>
 
@@ -306,7 +367,12 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{Binding RelativeSource={RelativeSource TemplatedParent}, 
-                                                   Path=(helpers:ButtonHelper.CornerRadius)}">
+                                                   Path=(helpers:ButtonHelper.CornerRadius)}"
+                            RenderTransformOrigin="0.5,0.5">
+                        <Border.RenderTransform>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        </Border.RenderTransform>
+
                         <ContentPresenter HorizontalAlignment="Center"
                                           VerticalAlignment="Center"/>
                     </Border>
@@ -316,10 +382,39 @@
                             <Setter TargetName="border" Property="BorderBrush" Value="{DynamicResource PrimaryOrangeBrush}"/>
                             <Setter TargetName="border" Property="BorderThickness" Value="2"/>
                             <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}"/>
+                            
                         </Trigger>
                         <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Panel.ZIndex" Value="99999"/>
                             <Setter TargetName="border" Property="Background" Value="{DynamicResource IconButtonHoverBackground}"/>
                             <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}"/>
+                            <!-- Bulge a bit more to 1.08x while pressed -->
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1.08" Duration="0:0:0.08"
+                                                     Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+                                        <DoubleAnimation To="1.08" Duration="0:0:0.08"
+                                                     Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <!-- When press ends, fall back; if still hovering,
+                                         the hover trigger will bump it back to 1.05 -->
+                                        <DoubleAnimation To="1" Duration="0:0:0.08"
+                                                     Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"/>
+                                        <DoubleAnimation To="1" Duration="0:0:0.08"
+                                                     Storyboard.TargetName="border"
+                                                     Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

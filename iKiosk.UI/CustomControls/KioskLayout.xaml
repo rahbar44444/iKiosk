@@ -30,35 +30,7 @@
             <RowDefinition Height="Auto"/>
             <!-- Footer -->
         </Grid.RowDefinitions>
-
-        <!-- Header slot -->
-        <!--<Border Grid.Row="0"
-                Background="{StaticResource PrimaryWhiteBrush}"
-                Padding="20,10"
-                BorderThickness="0,0,0,2"
-                BorderBrush="{StaticResource PrimaryBlackBrush}"
-                Visibility="{Binding IsHeaderVisible, ElementName=root, Converter={StaticResource BoolToVisibilityConverter}}">
-            <DockPanel LastChildFill="True">
-
-                --><!-- Image (optional) --><!--
-                <Image Width="60"
-                       Height="60"
-                       Margin="0,0,10,0"
-                       Source="{Binding HeaderImageSource, ElementName=root}"
-                       Visibility="{Binding HeaderImageSource, ElementName=root, Converter={StaticResource NullToVisibilityConverter}}"
-                       DockPanel.Dock="Left"
-                       Stretch="Uniform"/>
-
-                --><!-- Text --><!--
-                <TextBlock Text="{Binding HeaderText, ElementName=root}"
-                           FontFamily="{StaticResource PrimaryFontFamily}"
-                           FontSize="28"
-                           FontWeight="SemiBold"
-                           Foreground="{StaticResource PrimaryBlackBrush}"
-                           VerticalAlignment="Center"
-                           TextWrapping="Wrap"/>
-            </DockPanel>
-        </Border>-->
+        
         <ContentPresenter Grid.Row="0"
                           Content="{Binding HeaderContent, ElementName=root}"
                           VerticalAlignment="Top"
@@ -75,8 +47,8 @@
                 BorderThickness="0,2,0,0"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Left" 
-               Margin="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight},
-Converter={StaticResource ResponsiveBottomMarginConverter}}">
+                Margin="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight},
+                Converter={StaticResource ResponsiveBottomMarginConverter}}">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
@@ -86,7 +58,7 @@ Converter={StaticResource ResponsiveBottomMarginConverter}}">
                 <!-- Main Menu Button -->
                 <Viewbox Stretch="UniformToFill" StretchDirection="Both"
                          Margin="0 0 0 0">
-                    <controls:IconButton  BorderThickness="4"
+                    <controls:IconButton  BorderThickness="2"
                                      Margin="20,0,20,0"
                                      Text="{DynamicResource Footer_MainMenu}"
                                      IconWidth="150"
@@ -99,7 +71,7 @@ Converter={StaticResource ResponsiveBottomMarginConverter}}">
 
                 <!-- Back Button -->
                 <Viewbox Stretch="UniformToFill" StretchDirection="Both">
-                    <controls:IconButton  BorderThickness="4"
+                    <controls:IconButton  BorderThickness="2"
                                      Margin="20,0,20,0"
                                      Text="{DynamicResource Footer_Back}"
                                      IconSource="/iKiosk.UI;component/Images/back.png"
@@ -110,7 +82,7 @@ Converter={StaticResource ResponsiveBottomMarginConverter}}">
 
                 <!-- Next Button -->
                 <Viewbox Stretch="UniformToFill" StretchDirection="Both">
-                    <controls:IconButton  BorderThickness="4"
+                    <controls:IconButton  BorderThickness="2"
                                      Margin="20,0,20,0"
                                      Text="{DynamicResource Footer_Next}"
                                      IconSource="/iKiosk.UI;component/Images/next.png"
