@@ -17,8 +17,8 @@ namespace iKiosk.UI.ViewModels
 		private string _NextButtonText = "Next";
 
 		private decimal _RemainingAmount;
-		private decimal _InsertedAmount;
-		private decimal _TotalAmount;
+		private decimal _InsertedAmount = 600;
+		private decimal _TotalAmount = 1000;
 
 		private bool _IsMainMenuVisible = true;
 		private bool _IsBackVisible = true;
@@ -70,20 +70,34 @@ namespace iKiosk.UI.ViewModels
 
 		public decimal TotalAmount
 		{
-			get => _TotalAmount;
-			set { _TotalAmount = value; OnPropertyChanged(); CalculateRemaining(); }
+			get { return _TotalAmount; }
+			set 
+			{ 
+				_TotalAmount = value; 
+				OnPropertyChanged(); 
+				CalculateRemaining();
+			}
 		}
 
 		public decimal InsertedAmount
 		{
-			get => _InsertedAmount;
-			set { _InsertedAmount = value; OnPropertyChanged(); CalculateRemaining(); }
+			get { return _InsertedAmount; }
+			set 
+			{ 
+				_InsertedAmount = value; 
+				OnPropertyChanged(); 
+				CalculateRemaining(); 
+			}
 		}
 
 		public decimal RemainingAmount
 		{
-			get => _RemainingAmount;
-			private set { _RemainingAmount = value; OnPropertyChanged(); }
+			get { return _RemainingAmount; }
+		    set 
+			{ 
+				_RemainingAmount = value; 
+				OnPropertyChanged(); 
+			}
 		}
 
 		#endregion Public Properties
@@ -105,6 +119,7 @@ namespace iKiosk.UI.ViewModels
 			NavigateMainMenuCommand = new Command(NavigateMainMenu, CanNavigateMainMenu);
 			NavigateNextCommand = new Command(NavigateNext, CanNavigateNext);
 			NavigateBackCommand = new Command(NavigateBack, CanNavigateBack);
+			CalculateRemaining();
 		}
 
 		#endregion Constructor

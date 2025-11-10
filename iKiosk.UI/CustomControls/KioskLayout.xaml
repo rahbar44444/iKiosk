@@ -7,16 +7,17 @@
              xmlns:conv="clr-namespace:iKiosk.UI.Converters"
              x:Name="root"
              mc:Ignorable="d"
-             Background="White">
+             Background="{StaticResource PrimaryWhiteBrush}">
     <UserControl.Resources>
         <conv:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
         <conv:BoolToVisibilityConverter x:Key="NullToVisibilityConverter"/>
+        <conv:ResponsiveBottomMarginConverter x:Key="ResponsiveBottomMarginConverter" />
     </UserControl.Resources>
     <Grid>
         <!-- Background -->
         <Grid.Background>
             <ImageBrush ImageSource="/iKiosk.UI;component/Images/background.jpg"
-                        Stretch="UniformToFill"
+                        Stretch="Fill"
                         AlignmentX="Center"
                         AlignmentY="Center" />
         </Grid.Background>
@@ -72,17 +73,21 @@
         <!-- Footer -->
         <Border Grid.Row="2"
                 BorderThickness="0,2,0,0"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left">
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left" 
+               Margin="{Binding Source={x:Static SystemParameters.PrimaryScreenHeight},
+Converter={StaticResource ResponsiveBottomMarginConverter}}">
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Margin="0,0,0,10">
+                        
+>
 
                 <!-- Main Menu Button -->
-                <controls:IconButton Width="200"
-                                     Height="80" BorderThickness="4"
-                                     Margin="10,0"
+                <Viewbox Stretch="UniformToFill" StretchDirection="Both"
+                         Margin="0 0 0 0">
+                    <controls:IconButton  BorderThickness="4"
+                                     Margin="20,0,20,0"
                                      Text="{DynamicResource Footer_MainMenu}"
                                      IconWidth="150"
                                      IconHeight="150"
@@ -90,27 +95,30 @@
                                      Command="{Binding DataContext.NavigateMainMenuCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"                                     
                                      Style="{DynamicResource IconButtonStyle}"
                                      Visibility="{Binding IsMainMenuVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                </Viewbox>
 
                 <!-- Back Button -->
-                <controls:IconButton Width="200"
-                                     Height="80" BorderThickness="4"
-                                     Margin="10,0"
+                <Viewbox Stretch="UniformToFill" StretchDirection="Both">
+                    <controls:IconButton  BorderThickness="4"
+                                     Margin="20,0,20,0"
                                      Text="{DynamicResource Footer_Back}"
                                      IconSource="/iKiosk.UI;component/Images/back.png"
                                      Command="{Binding DataContext.NavigateBackCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"
                                      Style="{DynamicResource IconButtonStyle}"
                                      Visibility="{Binding IsBackVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                </Viewbox>
 
                 <!-- Next Button -->
-                <controls:IconButton Width="200"
-                                     Height="80" BorderThickness="4"
-                                     Margin="10,0"
+                <Viewbox Stretch="UniformToFill" StretchDirection="Both">
+                    <controls:IconButton  BorderThickness="4"
+                                     Margin="20,0,20,0"
                                      Text="{DynamicResource Footer_Next}"
                                      IconSource="/iKiosk.UI;component/Images/next.png"
                                      Command="{Binding DataContext.NavigateNextCommand, RelativeSource={RelativeSource AncestorType={x:Type controls:KioskLayout}}}"
                                      Style="{DynamicResource NextIconButtonStyle}"
                                      Visibility="{Binding IsNextVisible, Converter={StaticResource BoolToVisibilityConverter}}"
                                      IsEnabled="{Binding IsNextEnabled}"/>
+                </Viewbox>
             </StackPanel>
         </Border>
     </Grid>

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("iKiosk.Framework.Wpf")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a1b089979d9bb0e36e5571499798387414b4756")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ba68ddc2e70ceb5883a426bfdc9b38678d40ca8")]
 [assembly: System.Reflection.AssemblyProductAttribute("iKiosk.Framework.Wpf")]
 [assembly: System.Reflection.AssemblyTitleAttribute("iKiosk.Framework.Wpf")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

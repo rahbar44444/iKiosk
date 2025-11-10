@@ -33,6 +33,7 @@ namespace iKiosk.UI.ViewModels
 		private bool _IsMainMenuVisible = true;
 		private bool _IsNextVisible = true;
 		private bool _IsBackVisible = true;
+		private bool _IsNextEnabled = false;
 
 		#endregion Private Fields
 
@@ -78,6 +79,17 @@ namespace iKiosk.UI.ViewModels
 			}
 		}
 
+		public bool IsNextEnabled
+		{
+			get { return _IsNextEnabled; }
+			set 
+			{ 
+				_IsNextEnabled = value;
+				OnPropertyChanged("IsNextEnabled");
+			}
+		}
+
+
 		public string SelectedPaymentMethod
 		{
 			get { return _SelectedPaymentMethod; }
@@ -87,6 +99,7 @@ namespace iKiosk.UI.ViewModels
 				{
 					_SelectedPaymentMethod = value;
 					OnPropertyChanged(nameof(SelectedPaymentMethod));
+					IsNextEnabled = true;
 				}
 			}
 		}

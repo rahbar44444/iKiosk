@@ -33,6 +33,7 @@
 
         <!-- Main Content -->
         <controls:KioskLayout.MainContent>
+            <Viewbox>
             <Grid Margin="80">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -106,9 +107,9 @@
                                                   Height="300"
                                                   Width="400"/>
                 </StackPanel>
-            </Grid>
+                </Grid>
+            </Viewbox>
         </controls:KioskLayout.MainContent>
-
     </controls:KioskLayout>
 
 </fx:ViewControl>

@@ -23,25 +23,23 @@
                 <TextBlock Text="{DynamicResource MainContent_AmountToSend}"
                            VerticalAlignment="Center"
                            FontFamily="{StaticResource PrimaryFontFamily}"
-                           FontSize="28"
-                           FontWeight="SemiBold"
+                           FontSize="32"
                            Foreground="{DynamicResource PrimaryBlackBrush}"/>
             </StackPanel>
         </controls:KioskLayout.HeaderContent>
 
-        <!-- ✅ Main Content -->
+        <!-- Main Content -->
         <controls:KioskLayout.MainContent>
             <Grid Margin="50">
 
-                <!-- White card -->
                 <Border Background="{StaticResource PrimaryWhiteBrush}"
                         CornerRadius="20"
                         Padding="40"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Width="700"
+                        Width="600"
                         Effect="{DynamicResource CardShadow}">
-
+                    <Viewbox>
                     <StackPanel Orientation="Vertical"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center"
@@ -64,7 +62,7 @@
                             <!-- Pay by Cash -->
                             <controls:IconButton Width="225"
                                                  Height="150"
-                                                 BorderThickness="2"
+                                                 BorderThickness="3"
                                                  Text="{DynamicResource MainContent_PayByCash}"
                                                  IconPlacement="Top"
                                                  IconSource="/iKiosk.UI;component/Images/cash.jpg"
@@ -76,8 +74,8 @@
                                         <Style.Triggers>
                                             <DataTrigger Binding="{Binding SelectedPaymentMethod}" Value="Cash">
                                                 <Setter Property="BorderBrush" Value="{StaticResource PrimaryOrangeBrush}" />
-                                                <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}" />
-                                            </DataTrigger>
+                                                    <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}" />
+                                                </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </controls:IconButton.Style>
@@ -87,7 +85,7 @@
                             <controls:IconButton Width="225"
                                                  Height="150"
                                                  Margin="30 0 0 0"
-                                                 BorderThickness="2"
+                                                 BorderThickness="3"
                                                  Text="{DynamicResource MainContent_PayByCard}"
                                                  IconSource="/iKiosk.UI;component/Images/card.jpg"
                                                  
@@ -99,13 +97,15 @@ BasedOn="{StaticResource PaymentChoiceIconButton}">
                                             <DataTrigger Binding="{Binding SelectedPaymentMethod}" Value="Card">
                                                 <Setter Property="BorderBrush" Value="{StaticResource PrimaryOrangeBrush}" />
                                                 <Setter Property="Foreground" Value="{StaticResource PrimaryOrangeBrush}" />
-                                            </DataTrigger>
+                                                    
+                                                </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
                                 </controls:IconButton.Style>
                             </controls:IconButton>
                         </StackPanel>
                     </StackPanel>
+                    </Viewbox>
                 </Border>
             </Grid>
         </controls:KioskLayout.MainContent>

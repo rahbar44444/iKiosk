@@ -36,6 +36,7 @@
         <!-- Main content -->
         <controls:KioskLayout.MainContent>
             <!-- Language grid -->
+            <Viewbox>
             <ItemsControl ItemsSource="{Binding Languages}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -60,6 +61,7 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            </Viewbox>
         </controls:KioskLayout.MainContent>      
 
     </controls:KioskLayout>

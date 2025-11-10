@@ -31,8 +31,9 @@
         <!-- Main Content -->
         <controls:KioskLayout.MainContent>
             <Grid Margin="50">
-
+                <Viewbox>
                 <Border Background="{StaticResource PrimaryWhiteBrush}"
+                        Margin="30"
                         CornerRadius="20"
                         Padding="40"
                         HorizontalAlignment="Center"
@@ -40,7 +41,6 @@
                         Width="800"
                         Height="400"
                         Effect="{DynamicResource CardShadow}">
-
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -48,7 +48,6 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <!-- Left side -->
                         <StackPanel Grid.Column="0" Grid.ColumnSpan="2"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
@@ -64,9 +63,9 @@
                             <!-- Fields -->
                             <Grid>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="75"/>
-                                    <RowDefinition Height="75"/>
-                                    <RowDefinition Height="75"/>
+                                    <RowDefinition Height="Auto" MinHeight="75"/>
+                                    <RowDefinition Height="Auto" MinHeight="75"/>
+                                    <RowDefinition Height="Auto" MinHeight="75"/>
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
@@ -88,9 +87,9 @@
                                            Style="{StaticResource TextblockStyle}" Foreground="{StaticResource PrimaryBlackBrush}"
                                            Margin="0,0,10,10"/>
 
-                                <!-- Amount TextBoxes -->
+                               
                                 <TextBox Grid.Row="0" Grid.Column="1"
-                                         Text="10.00 SAR"
+                                         Text="{Binding TotalAmount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                          Style="{DynamicResource BoldBorderTextBoxStyle}"
                                          Height="60"
                                          FontWeight="Bold"
@@ -98,7 +97,7 @@
                                          Padding="5 15 0 0"
                                          Margin="10,0,0,10"/>
                                 <TextBox Grid.Row="1" Grid.Column="1"
-                                         Text="10.00 SAR"
+                                         Text="{Binding InsertedAmount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                          Style="{DynamicResource BoldBorderTextBoxStyle}"
                                          Height="60"
                                          FontWeight="Bold"
@@ -106,7 +105,7 @@
                                          Padding="5 15 0 0"
                                          Margin="10,0,0,10"/>
                                 <TextBox Grid.Row="2" Grid.Column="1"
-                                         Text="0.00 SAR"
+                                         Text="{Binding RemainingAmount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                          Style="{DynamicResource BoldBorderTextBoxStyle}"
                                          Height="60"
                                          FontWeight="Bold"
@@ -116,7 +115,6 @@
                             </Grid>
                         </StackPanel>
 
-                        <!-- Right side: ATM image -->
                         <Image Grid.Column="2" 
                                Source="/iKiosk.UI;component/Images/machine.jpg"
                                Width="250"
@@ -126,6 +124,7 @@
                                VerticalAlignment="Stretch"/>
                     </Grid>
                 </Border>
+                </Viewbox>
             </Grid>
         </controls:KioskLayout.MainContent>
     </controls:KioskLayout>
